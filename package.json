@@ -1,0 +1,23 @@
+{
+  "name": "milestone_project_2",
+  "version": "1.0.0",
+  "description": "Code Institute Milestone Project 2",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mparker-landt/Milestone_Project_2.git"
+  },
+  "author": "Marcus Parker",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mparker-landt/Milestone_Project_2/issues"
+  },
+  "homepage": "https://github.com/mparker-landt/Milestone_Project_2#readme",
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "jest": "^29.7.0"
+  }
+}
