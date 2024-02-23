@@ -1,0 +1,57 @@
+
+#game-environment {
+    background-color: grey;
+}
+
+#game-area {
+    background-color: lightgreen;
+
+    /* position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 80%; */
+
+    height: 100%;
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+}
+
+#game-controls {
+    background-color: lightslategray;
+    display: flex;
+}
+
+button {
+    background-color: lightblue;
+    border-radius: 10px;
+    height: 40px;
+    width: 120px;
+}
+
+#game-score {
+    background-color: white;
+}
+
+#hammer-hp {
+    background-color: white;
+}
+
+.icon-green {
+    color: greenyellow;
+}
+
+.icon-red {
+    color: red;
+}
+
+.circle { 
+    height: 100px;  
+    width: 150px; 
+    border: solid 1px black; 
+    background-color: black; 
+    border-radius: 50%;  
+    display: inline-block;
+}
