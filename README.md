@@ -1,39 +1,82 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Whack-A-Mole
 
-Welcome,
+## Code Institute - Milestone Project 2
+### HTML/CSS Essentials - Users Sentric, Static Front-End Website
+View Repository in GitHub Pages: https://github.com/mparker-landt/Milestone_Project_2
 
-This is the Code Institute student template for Codeanywhere. If you are using Gitpod then you need [this template](https://github.com/Code-Institute-Org/gitpod-full-template) instead.  We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+View Website Link: https://mparker-landt.github.io/Milestone_Project_2/
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **August 30th, 2023**
+Author: Marcus Parker\
+Github: [mparker-landt](https://github.com/mparker-landt)
 
-## Codeanywhere Reminders
+## The purpose for this project
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
+## Table of Contents
++ [UX](#ux "UX")
+  + [User Demographic](user-demographic "User Demographic")
+  + [User Stories](user-stories "User Stories")
+    + [First time Users Stories](first-time-user-stories "First Time Users Stories")
+    + [Returning Users Stories](#returning-user-stories "Returning Users Stories")
+  + [User Goals](#user-goals "User Goals")
+  + [Design](#design "Design")
+    + [Wireframes](#wireframes "Wireframes")
+    + [Colour Scheme](#colour-scheme "Colour Scheme")
+    + [Typography](#typography "Typography")
+    + [Images](#design "Design")
++ [Features](#features "Features")
+  + [Existing Features](#existing-features "Existing Features")
+    + [Header and Navigation Bar](#header-and-navigation-bar "Header and Navigation Bar") 
+    + [Footer](#footer "Features")
+    + [Home Page](#home-page "Home Page")
+    + [About Page](#about-page "About Page")
+    + [Classes Page](#classes-page "Classes Page")
+    + [Contact Page](#contact-page "Contact Page")
++ [Resources](#resources "Resources")
+  + [Technologies](#technologies "Technologies")
+  + [External Resources](#external-resources "External Resources")
++ [Testing](#testing "Testing")
+  + [HTML Validator Testing](#html-validator-testing "HTML Validator Testing")
+  + [CSS Validator Testing](#css-validator-testing "CSS Validator Testing")
+  + [Lighthouse Performance Testing](#lighthouse-performance-testing "Lighthouse Performance Testing")
++ [Deployment](#deployment "Deployment")
++ [Credits and Aknowledgements](#credits-and-aknowledgements "Credits and Aknowledgements")
+  + [Other Credits](#other-credits "Other Credits")
 
-`python3 -m http.server`
+## UX
+### User Demographic
+### User Stories
+#### First time Users Stories:
+#### Returning Users Stories:
+### User Goals
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+### Design
+#### Wireframes
+Wireframes were created with draw.io
+![wireframe](assets/images/readme/Milestone2Flow-Wireframes.svg)
+#### Flow Chart
+![wireframe](assets/images/readme/Milestone2Flow-Simple.svg)
+![wireframe](assets/images/readme/Milestone2Flow-Advanced.svg)
+#### Colour Scheme
+#### Typography
+#### Images
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
+## Features
+### Existing Features
+#### Header and Navigation Bar
+#### Footer
+#### Home Page
+#### About Page
+#### Classes Page
+#### Contact Page
 
-`http_server`
+## Resources
+### Technologies
+### External Resources
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+## Testing
+### HTML Validator Testing
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+## Deployment
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
-
----
-
-Happy coding!
+## Credits and Aknowledgements
+### Other Credits
