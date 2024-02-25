@@ -1,70 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <!-- Meta data -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Code Institute Milestone Project 2. Whack-A-Mole Interactive Frontend Game">
+        <meta name="keywords" content="Whack-A-Mole, Game, Milestone Project 2">
+        <meta name="author" content="Marcus Parker">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- font awesome and google fonts -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Raleway%7CRighteous" rel="stylesheet">
 
-    <!-- font awesome and google fonts -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Raleway%7CRighteous" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <!-- <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' /> -->
 
-    <link rel="stylesheet" href="assets/css/style.css">
-    <!-- <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' /> -->
-    <title>Whack-A-Mole</title>
-</head>
+        <!-- Title for the website -->
+        <title>Whack-A-Mole</title>
+    </head>
 
-<body>
-    <h1></h1>
+    <body>
+        <!-- Header for the website. Displays the website title and settings -->
+        <header>
+            <h1>Whack-A-Mole</h1>
+            <nav>
+                <ul>
+                    <li>Instructions</li>
+                    <li>Settings</li>
+                </ul>
+            </nav>
+        </header>
 
-    <div id="game-environment">
-        <div id="game-controls">
-            <button>Start Game</button>
-            <div class="game-display" id="game-score">
-                Score 
-                <span class="icon-green">0</span>
+        <!-- Websites game environment that takes up rest of the webpage.-->
+        <!-- Displays the area for the game to be played in as well as a button to start the game and games scores -->
+        <div id="game-environment">
+            <div id="game-controls">
+                <button>Start Game</button>
+                <div id="scoreboard">
+                    <div class="game-display" id="game-score">
+                        Score 
+                        <span class="icon-green">0</span>
+                    </div>
+                    <div class="game-display" id="hammer-hp">
+                        Hammer HP 
+                        <span class="icon-red">3</span>
+                    </div>
+                </div>
             </div>
-            <div class="game-display" id="hammer-hp">
-                Hammer HP 
-                <span class="icon-red">3</span>
+            
+            <div id="game-area">
+                <span class="circle"></span>
+                <span class="circle"></span>
+                <span class="circle"></span>
+                <span class="circle"></span>
+                <span class="circle"></span>
+                <span class="circle"></span>
+                <span class="circle"></span>
+                <span class="circle"></span>
+                <span class="circle"></span>
+                <span class="circle"></span>
+                <span class="circle"></span>
+                <span class="circle"></span>
+                <span class="circle"></span>
+                <span class="circle"></span>
+                <span class="circle"></span>
+                <span class="circle"></span>
+                <span class="circle"></span>
+                <span class="circle"></span>
+                <span class="circle"></span>
+                <span class="circle"></span>
+                <span class="circle"></span>
+                <span class="circle"></span>
+                <span class="circle"></span>
+                <span class="circle"></span>
+                <span class="circle"></span>
             </div>
         </div>
-        
-        <div id="game-area">
-            <span class="circle"></span>
-            <span class="circle"></span>
-            <span class="circle"></span>
-            <span class="circle"></span>
-            <span class="circle"></span>
 
-            <span class="circle"></span>
-            <span class="circle"></span>
-            <span class="circle"></span>
-            <span class="circle"></span>
-            <span class="circle"></span>
-
-            <span class="circle"></span>
-            <span class="circle"></span>
-            <span class="circle"></span>
-            <span class="circle"></span>
-            <span class="circle"></span>
-
-            <span class="circle"></span>
-            <span class="circle"></span>
-            <span class="circle"></span>
-            <span class="circle"></span>
-            <span class="circle"></span>
-
-            <span class="circle"></span>
-            <span class="circle"></span>
-            <span class="circle"></span>
-            <span class="circle"></span>
-            <span class="circle"></span>
-        </div>
-    </div>
-
-    <script src="scripts/script.js"></script>
-</body>
-
+        <script src="scripts/script.js"></script>
+    </body>
 </html>
