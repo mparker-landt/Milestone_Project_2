@@ -1,35 +1,41 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Anta&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     border: 0;
+
+    font-family: "Anta", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 header {
     position: sticky;
     top: 0;
     width: 100%;
-    background-color: grey;
-
-    height: 65px;
+    background-color: gray;
 
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
+    flex-direction: column;
 
     color: white;
 }
 
 h1 {
     font-size: xx-large;
-    width: 30%;
+    height: 100%;
+    background-color: #04AA6D;
+    padding: 2%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 nav {
     height: 100%;
-    width: 70%;
+    padding: 0 5%;
 
     display: flex;
     flex-direction: row;
@@ -38,14 +44,21 @@ nav {
     font-size: larger;
 }
 
-nav ul {
-    display: inherit;
-    list-style-type: none; 
+nav a {
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    background-color: #333;
 }
 
 #game-environment {
-    padding: 2% 1%;
-    height: 100%;
+    padding: 2% 0;
     width: 100%;
 
     background-color: white;
@@ -55,29 +68,26 @@ nav ul {
 }
 
 #game-area {
-    /* padding: 2%; */
-    height: 100%;
-    width: 98%;
-
     background-color: lightgreen;
 
     display: inline-grid;
-    /* grid-template-columns: repeat(5, 15%);
-    grid-template-rows: repeat(5, 15%); */
-    grid-template-columns: repeat(5, 18%);
-    grid-template-rows: repeat(5, 18%);
+    grid-template-columns: repeat(3, 31%);
+    grid-template-rows: repeat(4, 18%);
     gap: 2%;
     align-items: center;
     justify-items: center;
+
+    width: 98%;
+    padding: 2%;
 }
 
 #game-controls {
-    width: 98%;
+    padding: 5px 0;
 
-    border: 2px solid lightslategray;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
+    align-items: center;
 }
 
 button {
@@ -90,12 +100,14 @@ button {
 }
 
 #scoreboard {
-    display: flex;
-    flex-direction: row;
+    display: inherit;
+    justify-content: space-around;
+    padding: 5px 0;
 }
 
 #scoreboard > div {
     width: 120px;
+    height: 40px;
 }
 
 #game-score {
@@ -108,6 +120,7 @@ button {
     border-radius: 10px;
 
     font-weight: bold;
+    margin: 0 2px;
 }
 
 .icon-green {
@@ -126,6 +139,8 @@ button {
     border-radius: 10px;
 
     font-weight: bold;
+
+    margin: 0 2px;
 }
 
 .icon-red {
@@ -134,10 +149,184 @@ button {
     font-weight: bolder;
 }
 
-.circle { 
-    height: 130px;  
+.molehole { 
+    height: 90px;  
     width: 100%; 
     border: solid 1px black; 
     background-color: black; 
     border-radius: 50%;  
+}
+
+
+/* Mobile */
+/* @media only screen and (min-width: 290px) and (max-width: 549px) {
+
+} */
+
+/* Phablet */
+@media only screen and (min-width: 550px) {
+    /* change to single line */
+    /* change to 4x5 */
+
+    header {
+        position: sticky;
+        top: 0;
+        width: 100%;
+        background-color: grey;
+
+        height: 75px;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-around;
+
+        color: white;
+    }
+
+    h1 {
+        position: absolute;
+        left: 0;
+        top: 0;
+        font-size: xx-large;
+        height: 100%;
+        background-color: #04AA6D;
+        padding: 0 2%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    nav {
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 0 5%;
+        background-color: blue;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        font-size: larger;
+    }
+
+    #game-controls {
+        padding: 5px 0;
+    
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    
+    button {
+        background-color: lightskyblue;
+        border-radius: 10px;
+        height: 40px;
+        width: 120px;
+    
+        font-weight: bold;
+    }
+    
+    #scoreboard {
+        display: inherit;
+        justify-content: space-around;
+    }
+    
+    #scoreboard > div {
+        width: 120px;
+    }
+    
+    #game-score {
+        display: inherit;
+        justify-content: center;
+        align-items: center;
+    
+        background-color: white;
+        border: 1px solid darkgrey;
+        border-radius: 10px;
+    
+        font-weight: bold;
+    }
+    
+    .icon-green {
+        color: greenyellow;
+        padding: 0 5px;
+        font-weight: bolder;
+    }
+    
+    #hammer-hp {
+        display: inherit;
+        justify-content: center;
+        align-items: center;
+    
+        background-color: white;
+        border: 1px solid darkgrey;
+        border-radius: 10px;
+    
+        font-weight: bold;
+    }
+    
+    .icon-red {
+        color: red;
+        padding: 0 5px;
+        font-weight: bolder;
+    }
+
+    #game-area {
+        /* height: 100%; */
+        width: 98%;
+    
+        background-color: lightgreen;
+    
+        display: inline-grid;
+        grid-template-columns: repeat(4, 18%);
+        grid-template-rows: repeat(5, 18%);
+        gap: 2%;
+        align-items: center;
+        justify-items: center;
+    }
+    
+}
+
+/* Tablet */
+@media only screen and (min-width: 750px) {
+    /* change to 5x5 */
+
+    #game-area {
+        /* height: 100%; */
+        width: 98%;
+    
+        background-color: lightgreen;
+    
+        display: inline-grid;
+        grid-template-columns: repeat(5, 18%);
+        grid-template-rows: repeat(5, 18%);
+        gap: 2%;
+        align-items: center;
+        justify-items: center;
+    }
+    
+}
+
+/* Desktop */
+@media only screen and (min-width: 1400px) {
+    /* change to 7x5 */
+
+    #game-area {
+        /* height: 100%; */
+        width: 98%;
+    
+        background-color: lightgreen;
+    
+        display: inline-grid;
+        grid-template-columns: repeat(7, 18%);
+        grid-template-rows: repeat(5, 18%);
+        gap: 2%;
+        align-items: center;
+        justify-items: center;
+    }   
 }
