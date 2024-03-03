@@ -6,3 +6,14 @@
 // If area is hit without mole hammer hp decreases
 // If hammer hp is zero game is over
 // If hit score is over a certain amount different moles start appearing
+
+document.addEventListener("DOMContentLoaded", function() { // when loaded this function is triggered
+    console.log("page loaded");
+})
+
+
+function newGame() {
+    console.log("game running");
+}
+
+module.exports = newGame;
