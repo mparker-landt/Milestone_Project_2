@@ -22,7 +22,8 @@ var span = $(".close");
 
 const holes = document.querySelectorAll('.molehole');
 let lastHole;
-const moles = document.querySelectorAll('.mole');
+const moles = document.querySelector('.mole');
+
 
 //waits until page is loaded first
 $(document).ready(function() {
@@ -49,7 +50,6 @@ function newGame() {
 }
 
 
-
 function moleTime() {
     return Math.round(Math.random() * (MOLE_TIME_MAX - MOLE_TIME_MIN) + MOLE_TIME_MIN);
 }
@@ -68,7 +68,6 @@ function mole_hit(e) {
     this.parentNode.classList.remove('mole');
 }
 
-// moles.forEach(mole => mole.addEventListener('click', mole_hit));
 
 // function gameOver() {
 // }
@@ -95,3 +94,5 @@ function hammer() {
         modal.show();
     }
 }
+
+moles.forEach(mole => mole.addEventListener('click', mole_hit));
