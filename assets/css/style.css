@@ -91,13 +91,6 @@ nav a:hover {
 }
 
 button {
-    /* background-color: lightskyblue;
-    border-radius: 10px;
-    height: 40px;
-    width: 120px;
-
-    font-weight: bold; */
-
     display: inline-block;
     margin-right: 10px;
     background: #339DFF;
@@ -163,7 +156,7 @@ button_deactive {
 }
 
 .icon-green {
-    color: greenyellow;
+    color: #04AA6D;
     padding: 0 5px;
     font-weight: bolder;
 }

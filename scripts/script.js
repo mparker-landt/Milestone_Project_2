@@ -20,18 +20,50 @@ var btn = $("#mbtn");
 // Get the <span> element that closes the modal
 var span = $(".close");
 
+const holes = document.querySelectorAll('.molehole');
+let lastHole;
+
 //waits until page is loaded first
 $(document).ready(function() {
     console.log("page loaded");
 });
 
-
-/**
-* 
-*/
 function newGame() {
     console.log("game running");
     //deactive button
+
+    const time = moleTime();
+    const hole = moleHole(holes);
+    hole.classList.add('mole');
+    setTimeout(() => {
+        hole.classList.remove('mole');
+        newGame();
+    }, time);
+}
+
+
+
+function moleTime() {
+    return Math.round(Math.random() * (MOLE_TIME_MAX - MOLE_TIME_MIN) + MOLE_TIME_MIN);
+}
+
+function moleHole() {
+    const idx = Math.floor(Math.random() * holes.length);
+    const hole = holes[idx];
+    if (hole === lastHole) {
+        console.log('Ah nah thats the same one bud');
+        return randomHole(holes);
+    }
+    lastHole = hole;
+    return hole;
+}
+
+function mole_active() {
+
+}
+
+function gameOver() {
+
 }
 
 // When the user clicks anywhere outside of the modal, close it
@@ -41,28 +73,7 @@ $('body').bind('click', function(e){
     }
 });
 
-function moleTime() {
-    return Math.round(Math.random() * (MOLE_TIME_MAX - MOLE_TIME_MIN) + MOLE_TIME_MIN);
-}
-
-function moleHole() {
-
-}
-
-/**
-*
-*/
-function mole_active() {
-
-}
-
-function gameOver() {
-
-}
-
-
-
-
+/* These are dev functions just to see the scores changing. TO BE REMOVED */
 function score() {
     let oldScore = parseInt(document.getElementById("game-score").innerText);    
     document.getElementById("game-score").innerText = ++oldScore; 
