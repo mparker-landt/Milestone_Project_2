@@ -4,16 +4,76 @@
 // Amount of moles gradually increase in time and amount as hit score goes up?
 // If mole is hit score is increased and mole retreats
 // If area is hit without mole hammer hp decreases
-// If hammer hp is zero game is over
+// If hammer hp is zero game is over and modal pops up
 // If hit score is over a certain amount different moles start appearing
+const MOLE_TIME_MIN = 100;
+const MOLE_TIME_MAX = 1000;
+const MOLE_AMOUNT_MIN = 0;
+const MOLE_AMOUNT_MAX = 4;
 
-document.addEventListener("DOMContentLoaded", function() { // when loaded this function is triggered
+// Get the modal
+var modal = $('#modalDialog');
+
+// Get the button that opens the modal
+var btn = $("#mbtn");
+
+// Get the <span> element that closes the modal
+var span = $(".close");
+
+//waits until page is loaded first
+$(document).ready(function() {
     console.log("page loaded");
-})
+});
 
 
+/**
+* 
+*/
 function newGame() {
     console.log("game running");
+    //deactive button
 }
 
-module.exports = newGame;
+// When the user clicks anywhere outside of the modal, close it
+$('body').bind('click', function(e){
+    if($(e.target).hasClass("modal")){
+        modal.fadeOut();
+    }
+});
+
+function moleTime() {
+    return Math.round(Math.random() * (MOLE_TIME_MAX - MOLE_TIME_MIN) + MOLE_TIME_MIN);
+}
+
+function moleHole() {
+
+}
+
+/**
+*
+*/
+function mole_active() {
+
+}
+
+function gameOver() {
+
+}
+
+
+
+
+function score() {
+    let oldScore = parseInt(document.getElementById("game-score").innerText);    
+    document.getElementById("game-score").innerText = ++oldScore; 
+}
+
+function hammer() {
+    let hammer_hp = parseInt(document.getElementById("hammer-hp").innerText);    
+    document.getElementById("hammer-hp").innerText = --hammer_hp; 
+
+    if(hammer_hp <= 0) {
+        document.getElementById("hammer-hp").innerText = 0; // hammer hp has minimum of 0
+        modal.show();
+    }
+}

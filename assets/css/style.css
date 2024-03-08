@@ -91,6 +91,36 @@ nav a:hover {
 }
 
 button {
+    /* background-color: lightskyblue;
+    border-radius: 10px;
+    height: 40px;
+    width: 120px;
+
+    font-weight: bold; */
+
+    display: inline-block;
+    margin-right: 10px;
+    background: #339DFF;
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    line-height: 38px;
+    border-radius: 10px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    width: 150px;
+    text-align: center;
+
+    font-weight: bold; 
+}
+
+button:hover {
+    background: #fff;
+    color: #339DFF;
+    box-shadow: 0 4px 4px rgba(83, 100, 255, 0.32);
+}
+
+/* button_active {
     background-color: lightskyblue;
     border-radius: 10px;
     height: 40px;
@@ -98,6 +128,15 @@ button {
 
     font-weight: bold;
 }
+
+button_deactive {
+    background-color: lightskyblue;
+    border-radius: 10px;
+    height: 40px;
+    width: 120px;
+
+    color: lightslategray;
+} */
 
 #scoreboard {
     display: inherit;
@@ -110,7 +149,7 @@ button {
     height: 40px;
 }
 
-#game-score {
+#score-title {
     display: inherit;
     justify-content: center;
     align-items: center;
@@ -129,7 +168,7 @@ button {
     font-weight: bolder;
 }
 
-#hammer-hp {
+#hammer-title {
     display: inherit;
     justify-content: center;
     align-items: center;
@@ -155,6 +194,139 @@ button {
     border: solid 1px black; 
     background-color: black; 
     border-radius: 50%;  
+}
+
+.mole { 
+    height: 90px;  
+    width: 100%; 
+    border: solid 1px black; 
+    background-color: brown; 
+    border-radius: 50%;  
+}
+
+
+
+
+/* https://www.codexworld.com/code-snippets/modal-popup-with-html-css-jquery/ */
+.animate-top{
+    position:relative;
+    animation:animatetop 0.4s
+}
+@keyframes animatetop{
+    from{top:-300px;opacity:0} 
+    to{top:0;opacity:1}
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.275);
+}
+
+.modal-content {
+    margin: 5% auto;
+    width: 500px;
+    max-width: 90%;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.175);
+    border-radius: .3rem;
+    outline: 0;
+
+    background-color: #333;
+    color: white;
+    font-weight: bold;
+
+    border-radius: 10px;
+
+    border: 5px dashed yellow;
+}
+.modal-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: 1px solid #e9ecef;
+    border-top-left-radius: .3rem;
+    border-top-right-radius: .3rem;
+}
+.modal-title {
+    margin-bottom: 0;
+    line-height: 1.5;
+    margin-top: 0;
+    font-size: 1.25rem;
+    width: 65%;
+}
+.modal-header .close {
+    float: right;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: white;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .5;
+    padding: 1rem 2%;
+    margin: -1rem -1rem -1rem auto;
+    background-color: transparent;
+    border: 0;
+    width: 50px;
+}
+.close:not(:disabled):not(.disabled) {
+    cursor: pointer;
+}
+
+.modal-body {
+    flex: 1 1 auto;
+    padding: 1rem;
+}
+.modal-body p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+.modal-footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    padding: 1rem;
+    border-top: 1px solid #e9ecef;
+}
+.modal-footer>*{
+    margin: 5px;
+}
+
+#gameOver {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    background-color: #333;
+    color: white;
+    font-weight: bold;
+    top: 22%;
+    left: 10%;
+    width: 80%;
+    height: 100px;
+    text-align: center;
+
+    flex-direction: column;
+    justify-content: center;
+    
+    border: 5px dashed yellow;
 }
 
 

@@ -33,15 +33,15 @@
         <!-- Displays the area for the game to be played in as well as a button to start the game and games scores -->
         <div id="game-environment">
             <div id="game-controls">
-                <button class="button" onclick="newGame()">Start Game</button>
+                <button id="startGame" class="button_active" onclick="newGame()">Start Game</button>
                 <div id="scoreboard">
-                    <div class="game-display" id="game-score">
+                    <div class="game-display" id="score-title" onclick="score()">
                         Score 
-                        <span class="icon-green">0</span>
+                        <span id="game-score" class="icon-green">0</span>
                     </div>
-                    <div class="game-display" id="hammer-hp">
+                    <div class="game-display" id="hammer-title" onclick="hammer()">
                         Hammer HP 
-                        <span class="icon-red">3</span>
+                        <span id="hammer-hp" class="icon-red">3</span>
                     </div>
                 </div>
             </div>
@@ -75,6 +75,39 @@
             </div>
         </div>
 
+        <div id="gameOver" class="modal">
+            <h2>GAME OVER</h2>
+            <p>Better luck next time</p>
+            <!-- <img src="" alt="Goodbye Mole"> -->
+        </div>
+
+        <div id="ex1" class="modal">
+            <p>Thanks for clicking. That felt good.</p>
+            <a href="#" rel="modal:close">Close</a>
+        </div>
+
+        <!-- The Modal -->
+        <div id="modalDialog" class="modal">
+            <div class="modal-content animate-top">
+                <div class="modal-header">
+                    <h5 class="modal-title">GAME OVER!</h5>
+                    <button type="button" class="close">
+                        <span aria-hidden="true">x</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Better luck next time.</p>
+                </div>
+                <!-- <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary close">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div> -->
+            </div>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" /> -->
         <script src="scripts/script.js"></script>
     </body>
 </html>

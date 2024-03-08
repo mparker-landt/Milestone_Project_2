@@ -1,7 +1,8 @@
 {
     "typeAcquistion": {
         "include": [
-            "jest"
+            "jest",
+            "jquery"
         ]
     }
 }
