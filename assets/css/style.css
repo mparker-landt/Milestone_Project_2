@@ -221,7 +221,7 @@ button_deactive {
 }
 
 .molehole { 
-    height: 90px;  
+    height: 120px;  
     width: 100%; 
     border: solid 1px black; 
     background-color: black; 
@@ -248,19 +248,34 @@ footer {
     color: white;
     text-align: center;
     width: 100%;
-    padding: 2% 0;
+    padding-top: 2% 0;
 
-    /* bottom: 0;
-    position: absolute; */
+    bottom: 0;
+    position: fixed;
+    height: 15%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0;
+}
+
+footer p {
+    padding: 5px;
 }
 
 footer a {
     text-decoration: none;
     color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 6px;
 }
 
 footer a:hover {
-    /* color: purple; */
     text-decoration: underline;
 }
 
