@@ -42,6 +42,8 @@ nav {
     align-items: center;
 
     font-size: larger;
+
+    display: none;
 }
 
 nav a {
@@ -79,6 +81,7 @@ nav a:hover {
 
     width: 98%;
     padding: 2%;
+    padding-bottom: 30px;
 }
 
 #game-controls {
@@ -88,6 +91,13 @@ nav a:hover {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+}
+
+#game-admin {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
 }
 
 button {
@@ -110,6 +120,35 @@ button {
 button:hover {
     background: #fff;
     color: #339DFF;
+    box-shadow: 0 4px 4px rgba(83, 100, 255, 0.32);
+}
+
+.button_playing {
+    background: #fff;
+    color: #339DFF;
+    box-shadow: 0 4px 4px rgba(83, 100, 255, 0.32); 
+}
+
+#instructions {
+    display: inline;
+    margin-right: 10px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    line-height: 38px;
+    border-radius: 10px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    width: 50px;
+    text-align: center;
+
+    font-weight: bold; 
+    background-color: gray;
+}
+
+#instructions:hover {
+    background: #fff;
+    color: gray;
     box-shadow: 0 4px 4px rgba(83, 100, 255, 0.32);
 }
 
@@ -186,18 +225,44 @@ button_deactive {
     width: 100%; 
     border: solid 1px black; 
     background-color: black; 
+    opacity: 0.25;
     border-radius: 50%;  
 }
 
 .mole { 
     height: 90px;  
     width: 100%; 
-    border: solid 1px black; 
-    background-color: brown; 
+    /* border: solid 1px black;  */
+    /* background-color: brown;  */
     border-radius: 50%;  
+
+    background-image: url("../images/mole_normal.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 1;
+    opacity: 1;
 }
 
+footer {
+    background-color: grey;
+    color: white;
+    text-align: center;
+    width: 100%;
+    padding: 2% 0;
 
+    /* bottom: 0;
+    position: absolute; */
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+footer a:hover {
+    /* color: purple; */
+    text-decoration: underline;
+}
 
 
 /* https://www.codexworld.com/code-snippets/modal-popup-with-html-css-jquery/ */

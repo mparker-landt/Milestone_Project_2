@@ -6,7 +6,7 @@
 // If area is hit without mole hammer hp decreases
 // If hammer hp is zero game is over and modal pops up
 // If hit score is over a certain amount different moles start appearing
-const MOLE_TIME_MIN = 100;
+const MOLE_TIME_MIN = 250;
 const MOLE_TIME_MAX = 1000;
 const MOLE_AMOUNT_MIN = 0;
 const MOLE_AMOUNT_MAX = 4;
@@ -22,6 +22,7 @@ var span = $(".close");
 
 const holes = document.querySelectorAll('.molehole');
 let lastHole;
+const moles = document.querySelectorAll('.mole');
 
 //waits until page is loaded first
 $(document).ready(function() {
@@ -32,9 +33,15 @@ function newGame() {
     console.log("game running");
     //deactive button
 
+    var button = document.getElementById("startGame");
+    button.disabled = true;
+    button.innerText = "Playing";
+    button.classList.add("button_playing");
+
     const time = moleTime();
     const hole = moleHole(holes);
-    hole.classList.add('mole');
+    let moley = hole.classList.add('mole');
+    // moley.addEventListener("click", mole_hit);
     setTimeout(() => {
         hole.classList.remove('mole');
         newGame();
@@ -50,21 +57,21 @@ function moleTime() {
 function moleHole() {
     const idx = Math.floor(Math.random() * holes.length);
     const hole = holes[idx];
-    if (hole === lastHole) {
-        console.log('Ah nah thats the same one bud');
-        return randomHole(holes);
-    }
     lastHole = hole;
     return hole;
 }
 
-function mole_active() {
-
+function mole_hit(e) {
+    console.log("BONK!");
+    if(!e.isTrusted) return; // cheater!
+        score();
+    this.parentNode.classList.remove('mole');
 }
 
-function gameOver() {
+// moles.forEach(mole => mole.addEventListener('click', mole_hit));
 
-}
+// function gameOver() {
+// }
 
 // When the user clicks anywhere outside of the modal, close it
 $('body').bind('click', function(e){

@@ -33,7 +33,10 @@
         <!-- Displays the area for the game to be played in as well as a button to start the game and games scores -->
         <div id="game-environment">
             <div id="game-controls">
-                <button id="startGame" class="button_active" onclick="newGame()">Start Game</button>
+                <div id="game-admin">
+                    <button id="startGame" class="button_active" onclick="newGame()" this.disabled=true;>Start Game</button>
+                    <button id="instructions">?</button>
+                </div>
                 <div id="scoreboard">
                     <div class="game-display" id="score-title" onclick="score()">
                         Score 
@@ -104,6 +107,11 @@
                 </div> -->
             </div>
         </div>
+
+        <footer>
+            <p>Author: Marcus Parker</p>
+            <a href="https://github.com/mparker-landt" target="_blank" aria-label="Link to authors Github Page">@mparker-landt</a>
+        </footer>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
