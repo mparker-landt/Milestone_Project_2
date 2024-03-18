@@ -12,6 +12,7 @@ const MOLE_AMOUNT_MIN = 0;
 const MOLE_AMOUNT_MAX = 4;
 
 // Get the modal
+var modalInstructions = $('#modalInstructions');
 var modal = $('#modalDialog');
 
 // Get the button that opens the modal
@@ -32,11 +33,6 @@ $(document).ready(function() {
 });
 
 $('.molehole').click(function() {
-    if(Element.matches(".molehole.mole")) {
-        console.log("BONK!");
-        score();
-    }
-
     if(this.classList.contains(".mole")){
         console.log("BONK!");
         score();
@@ -47,10 +43,10 @@ $('.molehole').click(function() {
     }
 });
 
-$('.mole').click(function() {
-    console.log("BONK!");
-    score();
-});
+// $('.mole').click(function() {
+//     console.log("BONK!");
+//     score();
+// });
 
 
 function newGame() {
@@ -113,6 +109,7 @@ function mole_hit(e) {
 $('body').bind('click', function(e){
     if($(e.target).hasClass("modal")){
         modal.fadeOut();
+        modalInstructions.fadeOut();
     }
 });
 
@@ -137,4 +134,7 @@ function hammer() {
     }
 }
 
+function instructions() {
+    modalInstructions.show();
+}
 

@@ -38,7 +38,7 @@
             <div id="game-controls">
                 <div id="game-admin">
                     <button id="startGame" class="button_active" onclick="newGame()" this.disabled=true;>Start Game</button>
-                    <button id="instructions">?</button>
+                    <button id="instructions" onClick="instructions()" this.disabled=true;>?</button>
                 </div>
                 <div id="scoreboard">
                     <div class="game-display" id="score-title" onclick="score()">
@@ -68,15 +68,26 @@
             </div>
         </div>
 
-        <div id="gameOver" class="modal">
-            <h2>GAME OVER</h2>
-            <p>Better luck next time</p>
-            <!-- <img src="" alt="Goodbye Mole"> -->
-        </div>
-
-        <div id="ex1" class="modal">
-            <p>Thanks for clicking. That felt good.</p>
-            <a href="#" rel="modal:close">Close</a>
+        <!-- The Modal -->
+        <div id="modalInstructions" class="modal">
+            <div class="modal-content animate-top">
+                <div class="modal-header">
+                    <h5 class="modal-title">Instructions</h5>
+                    <button type="button" class="close">
+                        <span aria-hidden="true">x</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Hit a mole to make the score go up</p>
+                    <p>If you miss a mole and hit an empty molehill the hammer hp will decrease</p>
+                    <p>If you run of out hammer hp game over :P</p>
+                    <p>Have fun</p>
+                </div>
+                <!-- <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary close">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div> -->
+            </div>
         </div>
 
         <!-- The Modal -->
