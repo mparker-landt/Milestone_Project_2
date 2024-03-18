@@ -239,7 +239,7 @@ button_deactive {
     background-image: url("../images/mole_normal.png");
     background-size: contain;
     background-repeat: no-repeat;
-    z-index: 1;
+    z-index: 2;
     opacity: 1;
 }
 
@@ -444,21 +444,6 @@ footer a:hover {
         justify-content: center;
     }
 
-    nav {
-        height: 100%;
-        position: absolute;
-        top: 0;
-        right: 0;
-        padding: 0 5%;
-        background-color: blue;
-
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-
-        font-size: larger;
-    }
-
     #game-controls {
         padding: 5px 0;
     
@@ -491,7 +476,6 @@ footer a:hover {
         align-items: center;
     
         background-color: white;
-        border: 1px solid darkgrey;
         border-radius: 10px;
     
         font-weight: bold;
@@ -509,7 +493,6 @@ footer a:hover {
         align-items: center;
     
         background-color: white;
-        border: 1px solid darkgrey;
         border-radius: 10px;
     
         font-weight: bold;
@@ -522,17 +505,20 @@ footer a:hover {
     }
 
     #game-area {
-        /* height: 100%; */
-        width: 98%;
-    
         background-color: lightgreen;
+
+        margin-left: 15%;
+        width: 70%;
+
     
         display: inline-grid;
-        grid-template-columns: repeat(4, 18%);
+        grid-template-columns: repeat(4, 23%);
         grid-template-rows: repeat(5, 18%);
         gap: 2%;
         align-items: center;
         justify-items: center;
+
+        padding-bottom: 30px;
     }
     
 }
@@ -541,8 +527,7 @@ footer a:hover {
 @media only screen and (min-width: 750px) {
     /* change to 5x5 */
 
-    #game-area {
-        /* height: 100%; */
+    /* #game-area {
         width: 98%;
     
         background-color: lightgreen;
@@ -553,7 +538,7 @@ footer a:hover {
         gap: 2%;
         align-items: center;
         justify-items: center;
-    }
+    } */
     
 }
 
@@ -561,8 +546,7 @@ footer a:hover {
 @media only screen and (min-width: 1400px) {
     /* change to 7x5 */
 
-    #game-area {
-        /* height: 100%; */
+    /* #game-area {
         width: 98%;
     
         background-color: lightgreen;
@@ -573,5 +557,5 @@ footer a:hover {
         gap: 2%;
         align-items: center;
         justify-items: center;
-    }   
+    }    */
 }
