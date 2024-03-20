@@ -13,13 +13,7 @@ const MOLE_AMOUNT_MAX = 4;
 
 // Get the modal
 var modalInstructions = $('#modalInstructions');
-var modal = $('#modalDialog');
-
-// Get the button that opens the modal
-var btn = $("#mbtn");
-
-// Get the <span> element that closes the modal
-var span = $(".close");
+var modalGameover = $('#modalGameover');
 
 var game_run = false;
 
@@ -42,11 +36,6 @@ $('.molehole').click(function() {
         hammer();
     }
 });
-
-// $('.mole').click(function() {
-//     console.log("BONK!");
-//     score();
-// });
 
 
 function newGame() {
@@ -105,13 +94,7 @@ function mole_hit(e) {
     }
 }
 
-// When the user clicks anywhere outside of the modal, close it
-$('body').bind('click', function(e){
-    if($(e.target).hasClass("modal")){
-        modal.fadeOut();
-        modalInstructions.fadeOut();
-    }
-});
+
 
 /* These are dev functions just to see the scores changing. TO BE REMOVED */
 function score() {
@@ -125,7 +108,7 @@ function hammer() {
 
     if(hammer_hp <= 0) {
         document.getElementById("hammer-hp").innerText = 0; // hammer hp has minimum of 0
-        modal.show();
+        modalGameover.show();
 
         // button.innerText = "Start Game";
         // button.classList.remove("button_playing");
@@ -137,4 +120,20 @@ function hammer() {
 function instructions() {
     modalInstructions.show();
 }
+
+function instructions_close() {
+    modalInstructions.fadeOut();
+}
+
+function gameover_close() {
+    modalGameover.fadeOut();
+}
+
+// When the user clicks anywhere outside of the modal, close it
+$('body').bind('click', function(e){
+    if($(e.target).hasClass("modal")){
+        modalGameover.fadeOut();
+        modalInstructions.fadeOut();
+    }
+});
 

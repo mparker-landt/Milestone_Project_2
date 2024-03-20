@@ -26,10 +26,6 @@
         <!-- Header for the website. Displays the website title and settings -->
         <header>
             <h1>Whack-A-Mole</h1>
-            <nav>
-                <a href="#instructions">Instructions</a>
-                <a href="#settings">Settings</a>
-            </nav>
         </header>
 
         <!-- Websites game environment that takes up rest of the webpage.-->
@@ -73,39 +69,36 @@
             <div class="modal-content animate-top">
                 <div class="modal-header">
                     <h5 class="modal-title">Instructions</h5>
-                    <button type="button" class="close">
+                    <button type="button" class="close" onclick="instructions_close()">
                         <span aria-hidden="true">x</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <p>Hit a mole to make the score go up</p>
-                    <p>If you miss a mole and hit an empty molehill the hammer hp will decrease</p>
-                    <p>If you run of out hammer hp game over :P</p>
-                    <p>Have fun!</p>
+                    <p>□ Hit a mole to make the score go up</p>
+                    <p>□ If you miss a mole and hit an empty molehill the hammer hp will decrease</p>
+                    <p>□ If you run of out hammer hp game over :P</p>
+                    <p>□ Have fun!</p>
                 </div>
-                <!-- <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary close">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                </div> -->
+                <div class="modal-footer">
+                </div>
             </div>
         </div>
 
         <!-- The Modal -->
-        <div id="modalDialog" class="modal">
+        <div id="modalGameover" class="modal">
             <div class="modal-content animate-top">
                 <div class="modal-header">
                     <h5 class="modal-title">GAME OVER!</h5>
-                    <button type="button" class="close">
+                    <button type="button" class="close" onclick="gameover_close()">
                         <span aria-hidden="true">x</span>
                     </button>
                 </div>
                 <div class="modal-body">
                     <p>Better luck next time.</p>
+                    <img id="gameoverMole" src="assets/images/mole_normal.png" alt="game over mole">
                 </div>
-                <!-- <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary close">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                </div> -->
+                <div class="modal-footer">
+                </div>
             </div>
         </div>
 
