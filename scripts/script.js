@@ -13,6 +13,8 @@ const MOLE_TIME_MAX = 1500;
 const MOLE_AMOUNT_MIN = 0;
 const MOLE_AMOUNT_MAX = 4;
 
+var gameStart = $('#startGame');
+
 // Get the modals
 var modalInstructions = $('#modalInstructions');
 var modalGameover = $('#modalGameover');
@@ -32,6 +34,7 @@ $('.molehole').click(function(e) {
     if(game_run) {
         if($(e.target).hasClass('mole')){
             console.log("BONK!");
+            $(e.target).removeClass('mole')
             scoreIncrease();
         }
         else {
@@ -47,17 +50,18 @@ $('.molehole').click(function(e) {
 
 function newGame() {
     console.log("game running");
+    document.getElementById("hammer-hp").innerText = 3;
+    document.getElementById("game-score").innerText = 0; 
 
-    var button = document.getElementById("startGame");
-    if(button.classList.contains("button_playing")) {
-        button.innerText = "Start Game";
-        button.classList.remove("button_playing");
+    if(gameStart.hasClass("button_playing")) {
+        gameStart.removeClass("button_playing").addClass("button_stopped");
+        gameStart.text("Start Game");
 
         game_run = false;
     } 
     else {
-        button.innerText = "Stop Game";
-        button.classList.add("button_playing");
+        gameStart.removeClass("button_stopped").addClass("button_playing");
+        gameStart.text("Stop Game");
 
         game_run = true;
         gameRunning();
@@ -102,22 +106,31 @@ function moleHit(e) {
 }
 
 
-
 function scoreIncrease() {
     let oldScore = parseInt(document.getElementById("game-score").innerText);    
-    document.getElementById("game-score").innerText = ++oldScore; 
+    document.getElementById("game-score").innerText = ++oldScore;
+    
+    $('#score-title').removeClass('border-grey').addClass('border-green');
+    setTimeout(function() {
+        $('#score-title').removeClass('border-green').addClass('border-grey');
+    }, 300);
 }
 
 function hammerDecrease() {
     let hammer_hp = parseInt(document.getElementById("hammer-hp").innerText);    
     document.getElementById("hammer-hp").innerText = --hammer_hp; 
 
+    $('#hammer-title').removeClass('border-grey').addClass('border-red');
+    setTimeout(function() {
+        $('#hammer-title').removeClass('border-red').addClass('border-grey');
+    }, 300);
+
     if(hammer_hp <= 0) {
         document.getElementById("hammer-hp").innerText = 0; // hammer hp has minimum of 0
         modalGameover.show();
 
-        // button.innerText = "Start Game";
-        // button.classList.remove("button_playing");
+        gameStart.removeClass("button_playing").addClass("button_stopped");
+        gameStart.text("Start Game");
         game_run = false;
     }
 }

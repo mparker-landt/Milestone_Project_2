@@ -33,15 +33,15 @@
         <div id="game-environment">
             <div id="game-controls">
                 <div id="game-admin">
-                    <button id="startGame" class="button_active" onclick="newGame()" this.disabled=true;>Start Game</button>
-                    <button id="instructions" onClick="instructions()" this.disabled=true;>?</button>
+                    <button id="startGame" class="button_stopped" onclick="newGame()">Start Game</button>
+                    <button id="instructions" onClick="instructions()">?</button>
                 </div>
                 <div id="scoreboard">
-                    <div class="game-display" id="score-title" onclick="scoreIncrease()">
+                    <div id="score-title" class="border-grey" onclick="scoreIncrease()">
                         Score 
                         <span id="game-score" class="icon-green">0</span>
                     </div>
-                    <div class="game-display" id="hammer-title" onclick="hammerDecrease()">
+                    <div id="hammer-title" class="border-grey" onclick="hammerDecrease()">
                         Hammer HP 
                         <span id="hammer-hp" class="icon-red">3</span>
                     </div>
