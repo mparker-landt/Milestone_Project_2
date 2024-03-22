@@ -37,11 +37,11 @@
                     <button id="instructions" onClick="instructions()" this.disabled=true;>?</button>
                 </div>
                 <div id="scoreboard">
-                    <div class="game-display" id="score-title" onclick="score()">
+                    <div class="game-display" id="score-title" onclick="scoreIncrease()">
                         Score 
                         <span id="game-score" class="icon-green">0</span>
                     </div>
-                    <div class="game-display" id="hammer-title" onclick="hammer()">
+                    <div class="game-display" id="hammer-title" onclick="hammerDecrease()">
                         Hammer HP 
                         <span id="hammer-hp" class="icon-red">3</span>
                     </div>
@@ -49,18 +49,18 @@
             </div>
             
             <div id="game-area">
-                <div class="molehole"></div>
-                <div class="molehole"></div>
-                <div class="molehole"></div>
-                <div class="molehole"></div>
-                <div class="molehole"></div>
-                <div class="molehole"></div>
-                <div class="molehole"></div>
-                <div class="molehole"></div>
-                <div class="molehole"></div>
-                <div class="molehole"></div>
-                <div class="molehole"></div>
-                <div class="molehole"></div>
+                <div class="molehole"><div class="moleMedic"></div></div>
+                <div class="molehole"><div></div></div>
+                <div class="molehole"><div class="moleMiner"></div></div>
+                <div class="molehole"><div></div></div>
+                <div class="molehole"><div></div></div>
+                <div class="molehole"><div class="mole"></div></div>
+                <div class="molehole"><div></div></div>
+                <div class="molehole"><div class="moleBuff"></div></div>
+                <div class="molehole"><div></div></div>
+                <div class="molehole"><div></div></div>
+                <div class="molehole"><div></div></div>
+                <div class="molehole"><div class="moleGameover"></div></div>
             </div>
         </div>
 
@@ -69,7 +69,7 @@
             <div class="modal-content animate-top">
                 <div class="modal-header">
                     <h5 class="modal-title">Instructions</h5>
-                    <button type="button" class="close" onclick="instructions_close()">
+                    <button type="button" class="close" onclick="instructionsClose()">
                         <span aria-hidden="true">x</span>
                     </button>
                 </div>
@@ -89,13 +89,13 @@
             <div class="modal-content animate-top">
                 <div class="modal-header">
                     <h5 class="modal-title">GAME OVER!</h5>
-                    <button type="button" class="close" onclick="gameover_close()">
+                    <button type="button" class="close" onclick="gameoverClose()">
                         <span aria-hidden="true">x</span>
                     </button>
                 </div>
                 <div class="modal-body">
                     <p>Better luck next time.</p>
-                    <img id="gameoverMole" src="assets/images/mole_normal.png" alt="game over mole">
+                    <img id="gameoverMole" src="assets/images/mole_gameover.PNG" alt="game over mole">
                 </div>
                 <div class="modal-footer">
                 </div>
@@ -108,8 +108,6 @@
         </footer>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" /> -->
         <script src="scripts/script.js"></script>
     </body>
 </html>

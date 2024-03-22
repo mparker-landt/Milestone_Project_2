@@ -6,12 +6,14 @@
 // If area is hit without mole hammer hp decreases
 // If hammer hp is zero game is over and modal pops up
 // If hit score is over a certain amount different moles start appearing
+
+
 const MOLE_TIME_MIN = 1000; //250
 const MOLE_TIME_MAX = 1000;
 const MOLE_AMOUNT_MIN = 0;
 const MOLE_AMOUNT_MAX = 4;
 
-// Get the modal
+// Get the modals
 var modalInstructions = $('#modalInstructions');
 var modalGameover = $('#modalGameover');
 
@@ -29,17 +31,18 @@ $(document).ready(function() {
 $('.molehole').click(function() {
     if(this.classList.contains(".mole")){
         console.log("BONK!");
-        score();
+        scoreIncrease();
     }
     else {
         console.log("BOOP!");
-        hammer();
+        hammerDecrease();
     }
 });
 
 
 function newGame() {
     console.log("game running");
+    console
     //deactive button
 
     var button = document.getElementById("startGame");
@@ -63,7 +66,7 @@ function gameRunning() {
         const time = moleTime();
         const hole = moleHole(holes);
         let moley = hole.classList.add('mole');
-        // moley.addEventListener("click", mole_hit);
+        // moley.addEventListener("click", moleHit);
         setTimeout(() => {
             hole.classList.remove('mole');
             gameRunning();
@@ -86,7 +89,7 @@ function moleHole() {
     return hole;
 }
 
-function mole_hit(e) {
+function moleHit(e) {
     if(button.classList.contains("mole"))
     {
         console.log("BONK!");
@@ -96,13 +99,12 @@ function mole_hit(e) {
 
 
 
-/* These are dev functions just to see the scores changing. TO BE REMOVED */
-function score() {
+function scoreIncrease() {
     let oldScore = parseInt(document.getElementById("game-score").innerText);    
     document.getElementById("game-score").innerText = ++oldScore; 
 }
 
-function hammer() {
+function hammerDecrease() {
     let hammer_hp = parseInt(document.getElementById("hammer-hp").innerText);    
     document.getElementById("hammer-hp").innerText = --hammer_hp; 
 
@@ -121,11 +123,11 @@ function instructions() {
     modalInstructions.show();
 }
 
-function instructions_close() {
+function instructionsClose() {
     modalInstructions.fadeOut();
 }
 
-function gameover_close() {
+function gameoverClose() {
     modalGameover.fadeOut();
 }
 
