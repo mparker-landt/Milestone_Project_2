@@ -8,8 +8,8 @@
 // If hit score is over a certain amount different moles start appearing
 
 
-const MOLE_TIME_MIN = 1000; //250
-const MOLE_TIME_MAX = 1000;
+const MOLE_TIME_MIN = 500; //250
+const MOLE_TIME_MAX = 1500;
 const MOLE_AMOUNT_MIN = 0;
 const MOLE_AMOUNT_MAX = 4;
 
@@ -28,22 +28,25 @@ $(document).ready(function() {
     console.log("page loaded");
 });
 
-$('.molehole').click(function() {
-    if(this.classList.contains(".mole")){
-        console.log("BONK!");
-        scoreIncrease();
+$('.molehole').click(function(e) {
+    if(game_run) {
+        if($(e.target).hasClass('mole')){
+            console.log("BONK!");
+            scoreIncrease();
+        }
+        else {
+            console.log("BOOP!");
+            hammerDecrease();
+        }
     }
     else {
-        console.log("BOOP!");
-        hammerDecrease();
+        return;
     }
 });
 
 
 function newGame() {
     console.log("game running");
-    console
-    //deactive button
 
     var button = document.getElementById("startGame");
     if(button.classList.contains("button_playing")) {
@@ -62,13 +65,14 @@ function newGame() {
 }
 
 function gameRunning() {
-    if(game_run == true) {
+    if(game_run) {
         const time = moleTime();
         const hole = moleHole(holes);
-        let moley = hole.classList.add('mole');
+        // let moley = hole.classList.add('mole');
+        hole.firstChild.classList.add('mole');
         // moley.addEventListener("click", moleHit);
         setTimeout(() => {
-            hole.classList.remove('mole');
+            hole.firstChild.classList.remove('mole');
             gameRunning();
         }, time); 
     }
@@ -114,8 +118,7 @@ function hammerDecrease() {
 
         // button.innerText = "Start Game";
         // button.classList.remove("button_playing");
-
-        // game_run = false;
+        game_run = false;
     }
 }
 
