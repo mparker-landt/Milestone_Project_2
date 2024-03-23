@@ -65,18 +65,50 @@ Wireframes were created with draw.io
 ![wireframe](assets/images/readme/Milestone2Flow-Simple.svg)
 ![wireframe](assets/images/readme/Milestone2Flow-Advanced.svg)
 #### Colour Scheme
-TBC
+For easy visuals bold colours were used. Outside of the game area the major colours used were:
+* <span style="color:#04AA6D">#04AA6D</span> - Used for the header and score in the game
+* <span style="color:#808080">#808080</span> - Used for the footer and generic buttons and borders
+* <span style="color:#339DFF">#339DFF</span> - Used for the main button to start/stop the game
+
 #### Typography
-TBC
+The font used for this project was [Anta](https://fonts.google.com/specimen/Anta).
+This is a modern font family designed for screen publications. Due to the easy readibility and modern glyph shapes this was used to match the game aspect. 
 #### Images
-TBC
+For this project no opensource images were used. Instead custom images were created, compressed and imported into the game.
+A full list of the images provided:
+* Mole Hole
+* Normal Mole
+* Gameover Mole
+* Buff Mole
+* Medic Mole
+* Miner Mole
+* Bomb Mole
+* For the favicon the Normal Mole image was used
+
+Acknowledgements to the artist are found in the Credits section.
 
 ## Features
-### Existing Features
-#### Header and Navigation Bar
-#### Footer
+### Base Game Features
+* Start/Stop Game Button - Change visual on tapped, Reset counters, Hover effect on larger screens
+* Instructions Button and Popup
+* Score and HP Counters - Border flash on change
+* Game Area - Tap feedback, Mole goes when tapped
+* Initially slow but speeds up as score increases
+* Gameover Popup - Stops game
+* Modals - Close Button, Header/ body and footer, Body greyed out and pressable  
+### Advanced Game Features
+* Different Mole Charaters
+* Different speeds
+### Design Features
+* Header
+* Footer
+* Game Controls
+* Score Board
+* Game Area
 ### Future Features
-TBC
+* More characters
+* Potentially a score to reach to finish the game?
+* Collapsed footer that can be dragged up to see the information
 
 ## Resources
 ### Technologies
@@ -88,12 +120,9 @@ NPM\
 Jest
 ### External Resources
 Google Fonts\
-Font Awesome\
 W3 Schools\
 Draw.io\
-Stack Overflow\
-MyColor\
-Pexels or Other
+Stack Overflow
 
 
 ## Testing
@@ -139,5 +168,9 @@ Cloning the repository
 
 ## Credits and Aknowledgements
 TBC:
-* Mentor
-* RH
+* Mentor - Providing help throughout the project and giving direction and help where needed.
+* RH - Providing the art/images for the game and giving design feedback to improve the website.
+* CR - Helping with user testing of the game and finding bugs.
+
+Modals - https://www.codexworld.com/code-snippets/modal-popup-with-html-css-jquery/
+Grid CSS - https://www.joshwcomeau.com/css/interactive-guide-to-grid/

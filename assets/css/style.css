@@ -8,6 +8,12 @@
     font-family: "Anta", sans-serif;
     font-weight: 400;
     font-style: normal;
+
+    /* -webkit-transition: all 0.3s;   /* chrome */
+    /* -moz-transition: all 0.3s;      /* mozilla firefox */
+    /* -ms-transition: all 0.3s;       /* internet explorer */
+    /* -o-transition: all 0.3s;        /* opera */
+    /* transition: all 0.3s; */
 }
 
 header {
@@ -78,17 +84,10 @@ h1 {
 #startGame {
     /* display: inline-block; */
     margin: 0 2px;
-    /* background: #339DFF;
-    color: #fff; */
-    text-decoration: none;
     font-size: 13px;
     line-height: 38px;
     border-radius: 10px;
-    /* -webkit-transition: all 0.3s;   /* chrome */
-    /* -moz-transition: all 0.3s;      /* mozilla firefox */
-    /* -ms-transition: all 0.3s;       /* internet explorer */
-    /* -o-transition: all 0.3s;        /* opera */
-    /* transition: all 0.3s; */
+
     width: 150px;
     height: 42px;
     text-align: center;
@@ -122,14 +121,11 @@ h1 {
 
 #instructions {
     /* display: inline; */
-    margin-right: 10px;
+    margin: 0 2px;
     color: #fff;
-    text-decoration: none;
     font-size: 13px;
     line-height: 38px;
     border-radius: 10px;
-    /* -webkit-transition: all 0.3s;
-    transition: all 0.3s; */
     width: 50px;
     height: 42px;
     text-align: center;
@@ -211,13 +207,36 @@ h1 {
 .molehole { 
     height: 120px;  
     width: 100%; 
-    /* border: solid 1px black;  */
     background-color: rgba(255, 255, 255, 0);; 
-    border-radius: 50%;  
+    border-radius: 50%;
 
     background-image: url("../images/molehole.png");
     background-size: contain;
     background-repeat: no-repeat;
+}
+
+.tap-green {
+    position: relative;
+    left: 10%;
+    top: 20%;
+
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+    border: 3px solid #04AA6D;
+    z-index: 3;
+}
+
+.tap-red {
+    position: relative;
+    left: 10%;
+    top: 20%;
+
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+    border: 3px solid rgba(255, 0, 0, 0.5);
+    z-index: 3;
 }
 
 .mole { 
@@ -225,7 +244,7 @@ h1 {
     width: 100%; 
     /* border: solid 1px black;  */
     /* background-color: brown;  */
-    border-radius: 50%;  
+    border-radius: 50%;
 
     background-image: url("../images/mole_normal.png");
     background-size: contain;
@@ -291,7 +310,7 @@ h1 {
 }
 
 footer {
-    background-color: grey;
+    background-color: #808080;
     color: white;
     text-align: center;
     width: 100%;
@@ -494,7 +513,7 @@ footer a {
     }
     
     button {
-        background-color: lightskyblue;
+        background-color: #339DFF;
         border-radius: 10px;
         height: 40px;
         width: 120px;
@@ -523,7 +542,7 @@ footer a {
     }
     
     .icon-green {
-        color: greenyellow;
+        color: #04AA6D;
         padding: 0 5px;
         font-weight: bolder;
     }
@@ -546,7 +565,7 @@ footer a {
     }
 
     #game-area {
-        background-color: lightgreen;
+        background-color: #8dd359;
 
         margin-left: 15%;
         width: 70%;
@@ -571,7 +590,7 @@ footer a {
     /* #game-area {
         width: 98%;
     
-        background-color: lightgreen;
+        background-color: #8dd359;
     
         display: inline-grid;
         grid-template-columns: repeat(5, 18%);
@@ -590,7 +609,7 @@ footer a {
     /* #game-area {
         width: 98%;
     
-        background-color: lightgreen;
+        background-color: #8dd359;
     
         display: inline-grid;
         grid-template-columns: repeat(7, 18%);

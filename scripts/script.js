@@ -32,13 +32,21 @@ $(document).ready(function() {
 
 $('.molehole').click(function(e) {
     if(game_run) {
-        if($(e.target).hasClass('mole')){
+        if($(e.target).hasClass('mole')) {
             console.log("BONK!");
-            $(e.target).removeClass('mole')
+            $(e.target).removeClass('mole');
+            $(e.target).addClass('tap-green');
+            setTimeout(function() {
+                $(e.target).removeClass('tap-green');
+            }, 100);
             scoreIncrease();
         }
         else {
             console.log("BOOP!");
+            $(e.target).children("div").addClass('tap-red');
+            setTimeout(function() {
+                $(e.target).children("div").removeClass('tap-red');
+            }, 100);
             hammerDecrease();
         }
     }
