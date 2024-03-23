@@ -13,7 +13,8 @@
         <link href="https://fonts.googleapis.com/css?family=Raleway%7CRighteous" rel="stylesheet">
 
         <link rel="stylesheet" href="assets/css/style.css">
-        <!-- <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' /> -->
+
+        <link rel='shortcut icon' type='image/x-icon' href='favicon.ico'/>
 
         <!-- Title for the website -->
         <title>Whack-A-Mole</title>
@@ -23,91 +24,93 @@
         <!-- Header for the website. Displays the website title and settings -->
         <header>
             <h1>Whack-A-Mole</h1>
-            <nav>
-                <a href="#instructions">Instructions</a>
-                <a href="#settings">Settings</a>
-            </nav>
         </header>
 
         <!-- Websites game environment that takes up rest of the webpage.-->
-        <!-- Displays the area for the game to be played in as well as a button to start the game and games scores -->
         <div id="game-environment">
-            <div id="game-controls">
-                <button id="startGame" class="button_active" onclick="newGame()">Start Game</button>
+            <!-- Controls and visuals for the game -->
+            <div id="game-admin">
+                <!-- Buttons to start/stop the game and show instructions on how to play the game -->
+                <div id="game-controls">
+                    <button id="startGame" class="button_stopped" onclick="newGame()">Start Game</button>
+                    <button id="instructions" onClick="instructions()">?</button>
+                </div>
+                <!-- Displays for score and hammer HP -->
                 <div id="scoreboard">
-                    <div class="game-display" id="score-title" onclick="score()">
+                    <div id="score-title" class="border-grey" onclick="scoreIncrease()">
                         Score 
                         <span id="game-score" class="icon-green">0</span>
                     </div>
-                    <div class="game-display" id="hammer-title" onclick="hammer()">
+                    <div id="hammer-title" class="border-grey" onclick="hammerDecrease()">
                         Hammer HP 
                         <span id="hammer-hp" class="icon-red">3</span>
                     </div>
                 </div>
             </div>
             
+            <!-- Game area where once started game is played -->
             <div id="game-area">
-                <div class="molehole"></div>
-                <div class="molehole"></div>
-                <div class="molehole"></div>
-                <div class="molehole"></div>
-                <div class="molehole"></div>
-                <div class="molehole"></div>
-                <div class="molehole"></div>
-                <div class="molehole"></div>
-                <div class="molehole"></div>
-                <div class="molehole"></div>
-                <div class="molehole"></div>
-                <div class="molehole"></div>
-                <!-- <span class="molehole"></span>
-                <span class="molehole"></span>
-                <span class="molehole"></span> -->
-                <!-- <span class="molehole"></span>
-                <span class="molehole"></span>
-                <span class="molehole"></span>
-                <span class="molehole"></span>
-                <span class="molehole"></span>
-                <span class="molehole"></span>
-                <span class="molehole"></span>
-                <span class="molehole"></span>
-                <span class="molehole"></span>
-                <span class="molehole"></span> -->
+                <div class="molehole"><div></div></div>
+                <div class="molehole"><div></div></div>
+                <div class="molehole"><div></div></div>
+                <div class="molehole"><div></div></div>
+                <div class="molehole"><div></div></div>
+                <div class="molehole"><div></div></div>
+                <div class="molehole"><div></div></div>
+                <div class="molehole"><div></div></div>
+                <div class="molehole"><div></div></div>
+                <div class="molehole"><div></div></div>
+                <div class="molehole"><div></div></div>
+                <div class="molehole"><div></div></div>
             </div>
         </div>
 
-        <div id="gameOver" class="modal">
-            <h2>GAME OVER</h2>
-            <p>Better luck next time</p>
-            <!-- <img src="" alt="Goodbye Mole"> -->
+        <!-- Modal to show instructions on how to play the game, activated by button -->
+        <div id="modalInstructions" class="modal">
+            <div class="modal-content animate-top">
+                <div class="modal-header">
+                    <h5 class="modal-title">Instructions</h5>
+                    <button type="button" class="close" onclick="instructionsClose()">
+                        <span aria-hidden="true">x</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>□ Hit a mole to make the score go up</p>
+                    <p>□ If you miss a mole and hit an empty molehill the hammer hp will decrease</p>
+                    <p>□ If you run of out hammer hp game over :P</p>
+                    <p>□ Have fun!</p>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
         </div>
 
-        <div id="ex1" class="modal">
-            <p>Thanks for clicking. That felt good.</p>
-            <a href="#" rel="modal:close">Close</a>
-        </div>
-
-        <!-- The Modal -->
-        <div id="modalDialog" class="modal">
+        <!-- Modal to show gameover. Actived by hammer HP reaching zero -->
+        <div id="modalGameover" class="modal">
             <div class="modal-content animate-top">
                 <div class="modal-header">
                     <h5 class="modal-title">GAME OVER!</h5>
-                    <button type="button" class="close">
+                    <button type="button" class="close" onclick="gameoverClose()">
                         <span aria-hidden="true">x</span>
                     </button>
                 </div>
                 <div class="modal-body">
                     <p>Better luck next time.</p>
+                    <img id="gameoverMole" src="assets/images/mole_gameover.png" alt="game over mole">
                 </div>
-                <!-- <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary close">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                </div> -->
+                <div class="modal-footer">
+                </div>
             </div>
         </div>
 
+        <!-- Footer for the website. Contains author information -->
+        <footer>
+            <p>Author: Marcus Parker</p>
+            <a href="https://github.com/mparker-landt" target="_blank" aria-label="Link to authors Github Page">@mparker-landt</a>
+        </footer>
+
+        <!-- Javascript and Jquery scripts -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" /> -->
         <script src="scripts/script.js"></script>
     </body>
 </html>
