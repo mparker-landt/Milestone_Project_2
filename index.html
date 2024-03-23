@@ -13,8 +13,6 @@
         <link href="https://fonts.googleapis.com/css?family=Raleway%7CRighteous" rel="stylesheet">
 
         <link rel="stylesheet" href="assets/css/style.css">
-        <!-- <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' /> -->
-
 
         <link rel='shortcut icon' type='image/x-icon' href='favicon.ico'/>
 
@@ -29,13 +27,15 @@
         </header>
 
         <!-- Websites game environment that takes up rest of the webpage.-->
-        <!-- Displays the area for the game to be played in as well as a button to start the game and games scores -->
         <div id="game-environment">
-            <div id="game-controls">
-                <div id="game-admin">
+            <!-- Controls and visuals for the game -->
+            <div id="game-admin">
+                <!-- Buttons to start/stop the game and show instructions on how to play the game -->
+                <div id="game-controls">
                     <button id="startGame" class="button_stopped" onclick="newGame()">Start Game</button>
                     <button id="instructions" onClick="instructions()">?</button>
                 </div>
+                <!-- Displays for score and hammer HP -->
                 <div id="scoreboard">
                     <div id="score-title" class="border-grey" onclick="scoreIncrease()">
                         Score 
@@ -48,6 +48,7 @@
                 </div>
             </div>
             
+            <!-- Game area where once started game is played -->
             <div id="game-area">
                 <div class="molehole"><div></div></div>
                 <div class="molehole"><div></div></div>
@@ -64,7 +65,7 @@
             </div>
         </div>
 
-        <!-- The Modal -->
+        <!-- Modal to show instructions on how to play the game, activated by button -->
         <div id="modalInstructions" class="modal">
             <div class="modal-content animate-top">
                 <div class="modal-header">
@@ -84,7 +85,7 @@
             </div>
         </div>
 
-        <!-- The Modal -->
+        <!-- Modal to show gameover. Actived by hammer HP reaching zero -->
         <div id="modalGameover" class="modal">
             <div class="modal-content animate-top">
                 <div class="modal-header">
@@ -102,11 +103,13 @@
             </div>
         </div>
 
+        <!-- Footer for the website. Contains author information -->
         <footer>
             <p>Author: Marcus Parker</p>
             <a href="https://github.com/mparker-landt" target="_blank" aria-label="Link to authors Github Page">@mparker-landt</a>
         </footer>
 
+        <!-- Javascript and Jquery scripts -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <script src="scripts/script.js"></script>
     </body>

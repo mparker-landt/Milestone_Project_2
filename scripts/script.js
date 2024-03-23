@@ -34,11 +34,11 @@ $('.molehole').click(function(e) {
     if(game_run) {
         if($(e.target).hasClass('mole')) {
             console.log("BONK!");
-            $(e.target).removeClass('mole');
             $(e.target).addClass('tap-green');
             setTimeout(function() {
                 $(e.target).removeClass('tap-green');
             }, 100);
+            $(e.target).removeClass('mole');
             scoreIncrease();
         }
         else {
