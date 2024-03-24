@@ -142,6 +142,13 @@ h1 {
     border: 3px solid gray;
 }
 
+.instructions_mole {
+    left: 30%;
+    position: relative;
+    text-align: center;
+    width: 100px;
+}
+
 #scoreboard {
     display: inherit;
     justify-content: space-around;
@@ -431,6 +438,9 @@ footer a {
     padding: 1rem;
     overflow: scroll;
     max-height: 450px;
+
+    scrollbar-color: #e9ecef white;
+    scrollbar-width: auto;
 }
 
 .modal-body p {

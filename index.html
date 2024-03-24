@@ -37,11 +37,11 @@
                 </div>
                 <!-- Displays for score and hammer HP -->
                 <div id="scoreboard">
-                    <div id="score-title" class="border-grey" onclick="scoreIncrease()">
+                    <div id="score-title" class="border-grey">
                         Score 
                         <span id="game-score" class="icon-green">0</span>
                     </div>
-                    <div id="hammer-title" class="border-grey" onclick="hammerDecrease()">
+                    <div id="hammer-title" class="border-grey">
                         Hammer HP 
                         <span id="hammer-hp" class="icon-red">3</span>
                     </div>
@@ -77,8 +77,20 @@
                 <div class="modal-body">
                     <p>□ Hit a mole to make the score go up</p>
                     <p>□ If you miss a mole and hit an empty molehill the hammer hp will decrease</p>
-                    <p>□ If you run of out hammer hp game over :P</p>
+                    <p>□ If you run of out hammer hp game over</p>
+                    <p>□ Beware that as the score increases the game will become increasingly harder</p>
                     <p>□ Have fun!</p>
+
+                    <img class="instructions_mole" src="assets/images/mole_normal.png" alt="normal mole">
+                    <p>Mole Mole - When hit increases score by 1. Has normal speed.</p>
+                    <img class="instructions_mole" src="assets/images/mole_buff.png" alt="buff mole">
+                    <p>Swole Mole - Requires 2 hits to increase the score by 2 but stays around longer.</p>
+                    <img class="instructions_mole" src="assets/images/mole_miner.png" alt="miner mole">
+                    <p>Coal Mole- Increases the score when hit but takes away a hammer HP. Has quick speed.</p>
+                    <img class="instructions_mole" src="assets/images/mole_medic.png" alt="medic mole">
+                    <p>Dr Mole - Increases the score when hit and gives a hammer HP up to a maximum of 3. Has quick speed.</p>
+                    <img class="instructions_mole" src="assets/images/mole_bomber.png" alt="bomb mole">
+                    <p>Dem-mole-litionist - If hit instant game over. However score does increase by 1.</p>
                 </div>
                 <div class="modal-footer">
                 </div>

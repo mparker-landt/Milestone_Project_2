@@ -140,6 +140,8 @@ Acknowledgements to the artist are found in the Credits section.
 * Initially slow but speeds up as score increases
 * Different Mole Charaters
 * Different speeds
+* More moles appear, from 1 to 3 at a time
+
 ### Design Features
 * Header
 
