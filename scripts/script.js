@@ -24,6 +24,7 @@ var game_run = false;
 const holes = document.querySelectorAll('.molehole');
 let lastHole;
 const moles = document.querySelector('.mole');
+var clicked = false;
 
 //waits until page is loaded first
 $(document).ready(function() {
@@ -32,16 +33,61 @@ $(document).ready(function() {
 
 $('.molehole').click(function(e) {
     if(game_run) {
-        if($(e.target).hasClass('mole')) {
+        if($(e.target).hasClass('mole')) {              // Normal mole hit, score increases
             console.log("BONK!");
             $(e.target).addClass('tap-green');
             setTimeout(function() {
                 $(e.target).removeClass('tap-green');
             }, 100);
             $(e.target).removeClass('mole');
-            scoreIncrease();
+            scoreIncrease(1);
         }
-        else {
+        else if($(e.target).hasClass('moleMedic')) {    // Medic mole hit, score and hammer hp increase
+            console.log("BONK!");
+            $(e.target).addClass('tap-green');
+            setTimeout(function() {
+                $(e.target).removeClass('tap-green');
+            }, 100);
+            $(e.target).removeClass('moleMedic');
+            scoreIncrease(1);
+            hammerIncrease();
+        }
+        else if($(e.target).hasClass('moleMiner')) {    // Miner mole hit, score increases, hammer hp decreases
+            console.log("BONK!");
+            $(e.target).addClass('tap-green');
+            setTimeout(function() {
+                $(e.target).removeClass('tap-green');
+            }, 100);
+            $(e.target).removeClass('moleMiner');
+            scoreIncrease(1);
+            hammerDecrease();
+        }
+        else if($(e.target).hasClass('moleBuff')) {     // Buff mole hit, score increases
+            console.log("BONK!");
+
+            if(clicked) {
+                $(e.target).addClass('tap-green');
+                setTimeout(function() {
+                    $(e.target).removeClass('tap-green');
+                }, 100);
+                $(e.target).removeClass('moleBuff');
+                scoreIncrease(2);
+            }
+            else {
+                clicked = true;
+            }
+        }
+        else if($(e.target).hasClass('moleGameover')) { // Gameover mole hit, score increases but game over
+            console.log("BONK!");
+            $(e.target).addClass('tap-green');
+            setTimeout(function() {
+                $(e.target).removeClass('tap-green');
+            }, 100);
+            $(e.target).removeClass('moleGameover');
+            scoreIncrease(1);
+            gameover();
+        }
+        else {                                          // Molehole hit, hammer hp decreases
             console.log("BOOP!");
             $(e.target).children("div").addClass('tap-red');
             setTimeout(function() {
@@ -54,7 +100,6 @@ $('.molehole').click(function(e) {
         return;
     }
 });
-
 
 function newGame() {
     console.log("game running");
@@ -80,11 +125,36 @@ function gameRunning() {
     if(game_run) {
         const time = moleTime();
         const hole = moleHole(holes);
-        // let moley = hole.classList.add('mole');
-        hole.firstChild.classList.add('mole');
-        // moley.addEventListener("click", moleHit);
+
+        let oldScore = parseInt(document.getElementById("game-score").innerText);
+        if(oldScore <= 5) {
+            hole.firstChild.classList.add('mole');
+        }
+        else {
+            // let holeArray = [moleHole(holes), moleHole(holes), moleHole(holes)];
+
+            switch(moleChoose()) {
+                case 0:
+                    hole.firstChild.classList.add('mole');
+                break;
+                case 1:
+                    hole.firstChild.classList.add('moleMedic');
+                break;
+                case 2:
+                    hole.firstChild.classList.add('moleMiner');
+                break;
+                case 3:
+                    hole.firstChild.classList.add('moleBuff');
+                break;
+                case 4:
+                    hole.firstChild.classList.add('moleGameover');
+                break;
+            }
+        }
+
         setTimeout(() => {
-            hole.firstChild.classList.remove('mole');
+            hole.firstChild.className = "";
+            clicked = false;
             gameRunning();
         }, time); 
     }
@@ -95,7 +165,15 @@ function gameRunning() {
 }
 
 function moleTime() {
-    return Math.round(Math.random() * (MOLE_TIME_MAX - MOLE_TIME_MIN) + MOLE_TIME_MIN);
+    let oldScore = parseInt(document.getElementById("game-score").innerText);
+
+    if(oldScore <= 10) {
+        return Math.round(Math.random() * ((MOLE_TIME_MAX + 500) - (MOLE_TIME_MIN + 500)) + (MOLE_TIME_MIN + 500));
+    }
+    else {
+        return Math.round(Math.random() * (MOLE_TIME_MAX - MOLE_TIME_MIN) + MOLE_TIME_MIN);
+    }
+    
 }
 
 function moleHole() {
@@ -103,6 +181,12 @@ function moleHole() {
     const hole = holes[idx];
     lastHole = hole;
     return hole;
+}
+
+function moleChoose() {
+    const mole_character = Math.floor(Math.random() * 5);
+    console.log("Mole number chosen = " + mole_character);
+    return mole_character;
 }
 
 function moleHit(e) {
@@ -114,9 +198,13 @@ function moleHit(e) {
 }
 
 
-function scoreIncrease() {
+function scoreIncrease(score) {
+    if(score === undefined)
+        score = 1;
+
     let oldScore = parseInt(document.getElementById("game-score").innerText);    
-    document.getElementById("game-score").innerText = ++oldScore;
+    let newScore = oldScore + score;
+    document.getElementById("game-score").innerText = newScore;
     
     $('#score-title').removeClass('border-grey').addClass('border-green');
     setTimeout(function() {
@@ -134,13 +222,32 @@ function hammerDecrease() {
     }, 300);
 
     if(hammer_hp <= 0) {
-        document.getElementById("hammer-hp").innerText = 0; // hammer hp has minimum of 0
-        modalGameover.show();
-
-        gameStart.removeClass("button_playing").addClass("button_stopped");
-        gameStart.text("Start Game");
-        game_run = false;
+        gameover();
     }
+}
+
+function hammerIncrease() {
+    let hammer_hp = parseInt(document.getElementById("hammer-hp").innerText);    
+    document.getElementById("hammer-hp").innerText = ++hammer_hp; 
+
+    $('#hammer-title').removeClass('border-grey').addClass('border-green');
+    setTimeout(function() {
+        $('#hammer-title').removeClass('border-green').addClass('border-grey');
+    }, 300);
+
+    if(hammer_hp >= 0) {
+        document.getElementById("hammer-hp").innerText = 3; // hammer hp has maximum of 3
+    }
+}
+
+function gameover() {
+    document.getElementById("hammer-hp").innerText = 0; // hammer hp has minimum of 0
+
+    gameStart.removeClass("button_playing").addClass("button_stopped");
+    gameStart.text("Start Game");
+    game_run = false;
+
+    modalGameover.show();
 }
 
 function instructions() {
