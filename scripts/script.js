@@ -8,8 +8,8 @@
 // If hit score is over a certain amount different moles start appearing
 
 
-const MOLE_TIME_MIN = 500; //250
-const MOLE_TIME_MAX = 1500;
+const MOLE_TIME_MIN = 750; //250
+const MOLE_TIME_MAX = 1250;
 const MOLE_AMOUNT_MIN = 0;
 const MOLE_AMOUNT_MAX = 4;
 
@@ -123,12 +123,13 @@ function newGame() {
 
 function gameRunning() {
     if(game_run) {
-        const time = moleTime();
+        let moleSpeed;
         const hole = moleHole(holes);
 
         let oldScore = parseInt(document.getElementById("game-score").innerText);
         if(oldScore <= 5) {
             hole.firstChild.classList.add('mole');
+            moleSpeed = 1;
         }
         else {
             // let holeArray = [moleHole(holes), moleHole(holes), moleHole(holes)];
@@ -136,21 +137,27 @@ function gameRunning() {
             switch(moleChoose()) {
                 case 0:
                     hole.firstChild.classList.add('mole');
+                    moleSpeed = 1;
                 break;
                 case 1:
                     hole.firstChild.classList.add('moleMedic');
+                    moleSpeed = 0;
                 break;
                 case 2:
                     hole.firstChild.classList.add('moleMiner');
+                    moleSpeed = 0;
                 break;
                 case 3:
                     hole.firstChild.classList.add('moleBuff');
+                    moleSpeed = 2;
                 break;
                 case 4:
                     hole.firstChild.classList.add('moleGameover');
+                    moleSpeed = 2;
                 break;
             }
         }
+        const time = moleTime(moleSpeed);
 
         setTimeout(() => {
             hole.firstChild.className = "";
@@ -164,15 +171,32 @@ function gameRunning() {
     
 }
 
-function moleTime() {
+function moleTime(speed) {
     let oldScore = parseInt(document.getElementById("game-score").innerText);
 
-    if(oldScore <= 10) {
-        return Math.round(Math.random() * ((MOLE_TIME_MAX + 500) - (MOLE_TIME_MIN + 500)) + (MOLE_TIME_MIN + 500));
+    if(oldScore <= 10)
+        speed = 2;
+
+    switch(speed) {
+        case 0:
+            return Math.round(Math.random() * ((MOLE_TIME_MAX - 250) - (MOLE_TIME_MIN - 250)) + (MOLE_TIME_MIN - 250));
+        break;
+
+        case 1:
+            return Math.round(Math.random() * (MOLE_TIME_MAX - MOLE_TIME_MIN) + MOLE_TIME_MIN);
+        break;
+
+        case 2:
+            return Math.round(Math.random() * ((MOLE_TIME_MAX + 250) - (MOLE_TIME_MIN + 250)) + (MOLE_TIME_MIN + 250));
+        break;
     }
-    else {
-        return Math.round(Math.random() * (MOLE_TIME_MAX - MOLE_TIME_MIN) + MOLE_TIME_MIN);
-    }
+
+    // if(oldScore <= 10) {
+    //     return Math.round(Math.random() * ((MOLE_TIME_MAX + 500) - (MOLE_TIME_MIN + 500)) + (MOLE_TIME_MIN + 500));
+    // }
+    // else {
+    //     return Math.round(Math.random() * (MOLE_TIME_MAX - MOLE_TIME_MIN) + MOLE_TIME_MIN);
+    // }
     
 }
 
