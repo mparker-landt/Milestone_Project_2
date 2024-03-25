@@ -37,6 +37,7 @@ $(document).ready(function() {
     console.log("page loaded");
 });
 
+
 $('.molehole').click(function(e) {
     if(game_run) {
         if($(e.target).hasClass('mole')) {              // Normal mole hit, score increases
@@ -111,6 +112,20 @@ $('.molehole').click(function(e) {
     }
 });
 
+
+/**
+ * hides the game over pop up modal and immedietly starts a new game
+ */
+function restartGame() {
+    gameoverClose();
+    newGame();
+}
+
+/**
+ * starts a new game
+ * resets the scores back to initial values
+ * changes the activate game button depending on wether play or stop has been chosen
+ */
 function newGame() {
     console.log("game running");
     document.getElementById("hammer-hp").innerText = 3;
@@ -119,13 +134,13 @@ function newGame() {
     if(gameStart.hasClass("button_playing")) {
         gameStart.removeClass("button_playing").addClass("button_stopped");
         gameStart.text("Start Game");
-
+        
         game_run = false;
     } 
     else {
         gameStart.removeClass("button_stopped").addClass("button_playing");
         gameStart.text("Stop Game");
-
+        
         game_run = true;
         gameRunning();
     }
@@ -181,6 +196,11 @@ function gameRunning() {
     
 }
 
+/**
+ * function to give the amount of time a mole should spend active in the game.
+ * @param {*} speed different values to shorten or lengthen the average amount of time a mole spends active
+ * @returns average amount of time a mole spends active
+ */
 function moleTime(speed) {
     let oldScore = parseInt(document.getElementById("game-score").innerText);
 
@@ -210,6 +230,10 @@ function moleTime(speed) {
     
 }
 
+/**
+ * returns a random specific number that will correspond to which molehole needs to be activated
+ * @returns a random number that can be any of the class .molehole divs 
+ */
 function moleHole() {
     const idx = Math.floor(Math.random() * holes.length);
     const hole = holes[idx];
@@ -217,21 +241,21 @@ function moleHole() {
     return hole;
 }
 
+/**
+ * returns a random number that corresponds to a mole character to be activated
+ * @returns number between 0 and 5
+ */
 function moleChoose() {
     const mole_character = Math.floor(Math.random() * 5);
     console.log("Mole number chosen = " + mole_character);
     return mole_character;
 }
 
-function moleHit(e) {
-    if(button.classList.contains("mole"))
-    {
-        console.log("BONK!");
-        score();
-    }
-}
 
-
+/**
+ * scoreIncrease is to increase and display the score in the score-title in scoreboard
+ * @param {*} score how much the score is to be increased by
+ */
 function scoreIncrease(score) {
     if(score === undefined)
         score = 1;
@@ -246,6 +270,9 @@ function scoreIncrease(score) {
     }, 300);
 }
 
+/**
+ * hammerDecrease is to decrement the hammer hp and display the value in the hammer-title in scoreboard
+ */
 function hammerDecrease() {
     let hammer_hp = parseInt(document.getElementById("hammer-hp").innerText);    
     document.getElementById("hammer-hp").innerText = --hammer_hp; 
@@ -260,6 +287,9 @@ function hammerDecrease() {
     }
 }
 
+/**
+ * hammerIncrease is to increment the hammer hp and display the value in the hammer-title in scoreboard
+ */
 function hammerIncrease() {
     let hammer_hp = parseInt(document.getElementById("hammer-hp").innerText);    
     document.getElementById("hammer-hp").innerText = ++hammer_hp; 
@@ -274,6 +304,11 @@ function hammerIncrease() {
     }
 }
 
+/**
+ * stops the game running on game overflow: 
+ * changes the start game visual back to initial state
+ * activates the pop up modal to show game over
+ */
 function gameover() {
     document.getElementById("hammer-hp").innerText = 0; // hammer hp has minimum of 0
 
@@ -284,19 +319,30 @@ function gameover() {
     modalGameover.show();
 }
 
+/**
+ * activates the pop up modal to show the instructions
+ */
 function instructions() {
     modalInstructions.show();
 }
 
+/**
+ * closes the instructions pop up modal
+ */
 function instructionsClose() {
     modalInstructions.fadeOut();
 }
 
+/**
+ * closes the game over pop up modal
+ */
 function gameoverClose() {
     modalGameover.fadeOut();
 }
 
-// When the user clicks anywhere outside of the modal, close it
+/**
+ * closes either the instructions or game over pop up modals
+ */
 $('body').bind('click', function(e){
     if($(e.target).hasClass("modal")){
         modalGameover.fadeOut();
@@ -304,13 +350,15 @@ $('body').bind('click', function(e){
     }
 });
 
+
+/**
+ * toggles the collapsible footer in smaller mobile screens
+ */
 function toggleFooter() {
-    let footerContentState = document.getElementById("footer-content");
-    if (footerContentState.style.display === "none") {
-        footerContentState.style.display = "block";
+    if($("#footer-content").hasClass('footer-content-none')) {
+        $("#footer-content").removeClass('footer-content-none').addClass('footer-content-visible');
     }
     else {
-        footerContentState.style.display = "none";
-        
+        $("#footer-content").removeClass('footer-content-visible').addClass('footer-content-none');
     }
 }

@@ -104,9 +104,10 @@
                         <span aria-hidden="true">x</span>
                     </button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body-center">
                     <p>Better luck next time.</p>
                     <img id="gameoverMole" src="assets/images/mole_gameover.png" alt="game over mole">
+                    <button id="startGame" class="button_stopped" onclick="restartGame()">Restart Game</button>
                 </div>
                 <div class="modal-footer">
                 </div>
@@ -117,7 +118,7 @@
         <!-- https://codepen.io/philknowles/pen/WrYRvG -->
         <footer id="footer">
             <button id="footer-activate" onclick="toggleFooter()"><i class="fa fa-solid fa-caret-down dropRotate"></i></button>
-            <div id="footer-content" style="display: none;">
+            <div id="footer-content" class="footer-content-none">
                 <p>Author: Marcus Parker</p>
                 <a href="https://github.com/mparker-landt" target="_blank" aria-label="Link to authors Github Page">@mparker-landt</a>
             </div>
