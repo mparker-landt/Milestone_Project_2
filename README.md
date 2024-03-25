@@ -170,6 +170,7 @@ Acknowledgements to the artist are found in the Credits section.
 * Potentially a score to reach to finish the game?
 * Collapsed footer that can be dragged up to see the information
 * Animations for the moles
+* Tutorial
 
 ## Resources
 ### Technologies
@@ -235,3 +236,5 @@ TBC:
 
 Modals - https://www.codexworld.com/code-snippets/modal-popup-with-html-css-jquery/
 Grid CSS - https://www.joshwcomeau.com/css/interactive-guide-to-grid/
+Footer - https://codepen.io/philknowles/pen/WrYRvG
+Tap - 

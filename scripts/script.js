@@ -13,6 +13,12 @@ const MOLE_TIME_MAX = 1250;
 const MOLE_AMOUNT_MIN = 0;
 const MOLE_AMOUNT_MAX = 4;
 
+
+var footerActivate = $('#footer-activate');
+// var footerContent = $('#footer-content');
+var footerContent = document.getElementById('footer-content');
+var footerClose = $('#close');
+
 var gameStart = $('#startGame');
 
 // Get the modals
@@ -74,6 +80,10 @@ $('.molehole').click(function(e) {
                 scoreIncrease(2);
             }
             else {
+                $(e.target).addClass('tap-grey');
+                setTimeout(function() {
+                    $(e.target).removeClass('tap-grey');
+                }, 100);
                 clicked = true;
             }
         }
@@ -294,3 +304,13 @@ $('body').bind('click', function(e){
     }
 });
 
+function toggleFooter() {
+    let footerContentState = document.getElementById("footer-content");
+    if (footerContentState.style.display === "none") {
+        footerContentState.style.display = "block";
+    }
+    else {
+        footerContentState.style.display = "none";
+        
+    }
+}
