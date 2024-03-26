@@ -16,6 +16,10 @@
     /* transition: all 0.3s; */
 }
 
+.wrapper, html, body {
+    height: 100%;
+}
+
 header {
     position: sticky;
     top: 0;
@@ -41,12 +45,14 @@ h1 {
 
 #game-environment {
     padding: 2% 0;
-    /* width: 100%; */
+    height: 83vh;
 
     background-color: white;
     
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-content: center;
 }
 
 #game-area {
@@ -55,13 +61,13 @@ h1 {
     display: inline-grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1%;
+
+    padding-bottom: 10%;
     
     justify-content: space-evenly;  /* justify-content  = align the columns */
     justify-items: center;          /* justify-items    = align content inside the columns */
     align-content: space-evenly;    /* align-content    = align the rows */
     align-items: center;            /* align-items      = align content inside the rows */
-
-    padding: 6% 3%;
 
     cursor: pointer;
 }
@@ -83,7 +89,6 @@ h1 {
 }
 
 #startGame {
-    /* display: inline-block; */
     margin: 0 2px;
     font-size: 13px;
     line-height: 38px;
@@ -96,13 +101,6 @@ h1 {
     font-weight: bold; 
 
     cursor: pointer;
-}
-
-#startGame:hover {
-    background: #fff;
-    color: #339DFF;
-    box-shadow: 0 4px 4px rgba(83, 100, 255, 0.32);
-    border: 3px solid #339DFF;
 }
 
 .button_stopped {
@@ -119,8 +117,14 @@ h1 {
     border: 3px solid #339DFF;
 }
 
+#startGame:hover {
+    background: #fff;
+    color: #339DFF;
+    box-shadow: 0 4px 4px rgba(83, 100, 255, 0.32);
+    border: 3px solid #339DFF;
+}
+
 #instructions {
-    /* display: inline; */
     margin: 0 2px;
     color: #fff;
     font-size: 13px;
@@ -144,10 +148,10 @@ h1 {
 }
 
 .instructions_mole {
-    left: 30%;
+    left: 40%;
     position: relative;
     text-align: center;
-    width: 100px;
+    width: 25%;
 }
 
 #scoreboard {
@@ -174,7 +178,7 @@ h1 {
 
 .border-grey {
     background-color: white;
-    border: 3px solid grey;
+    border: 3px solid #808080;
 }
 
 .border-green {
@@ -212,146 +216,105 @@ h1 {
 }
 
 .molehole { 
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+
     height: 120px;  
     width: 100%; 
+
     background-color: rgba(255, 255, 255, 0);; 
     border-radius: 50%;
+
+    background-position: center; 
 
     background-image: url("../images/molehole.png");
     background-size: contain;
     background-repeat: no-repeat;
 }
 
-.tap-grey {
-    position: relative;
-    left: 10%;
-    top: 20%;
-
-    border-radius: 50%;
-    height: 70px;
-    width: 70px;
-    border: 3px solid gray;
-    z-index: 3;
-}
-
-.tap-green {
-    position: relative;
-    left: 10%;
-    top: 20%;
-
-    border-radius: 50%;
-    height: 70px;
-    width: 70px;
-    border: 3px solid #04AA6D;
-    z-index: 3;
-}
-
-.tap-red {
-    position: relative;
-    left: 10%;
-    top: 20%;
-
-    border-radius: 50%;
-    height: 70px;
-    width: 70px;
-    border: 3px solid rgba(255, 0, 0, 0.5);
-    z-index: 3;
-}
-
 .mole { 
-    height: 120px;  
-    width: 100%; 
-    /* border: solid 1px black;  */
-    /* background-color: brown;  */
-    border-radius: 50%;
+    height: inherit;  
+    width: auto; 
 
+    background-position: center; 
     background-image: url("../images/mole_normal.png");
     background-size: contain;
     background-repeat: no-repeat;
     z-index: 2;
-    opacity: 1;
 }
 
 .moleMedic { 
-    height: 120px;  
-    width: 100%; 
-    /* border: solid 1px black;  */
-    /* background-color: brown;  */
-    border-radius: 50%;  
+    height: inherit;  
+    width: auto;  
 
+    background-position: center; 
     background-image: url("../images/mole_medic.png");
     background-size: contain;
     background-repeat: no-repeat;
     z-index: 2;
-    opacity: 1;
 }
 
 .moleMiner { 
-    height: 120px;  
-    width: 100%; 
-    /* border: solid 1px black;  */
-    /* background-color: brown;  */
-    border-radius: 50%;  
+    height: inherit;  
+    width: auto; 
 
+    background-position: center; 
     background-image: url("../images/mole_miner.png");
     background-size: contain;
     background-repeat: no-repeat;
     z-index: 2;
-    opacity: 1;
 }
 
 .moleBuff { 
-    height: 120px;  
-    width: 100%; 
-    /* border: solid 1px black;  */
-    /* background-color: brown;  */
-    border-radius: 50%;  
+    height: inherit;  
+    width: auto;  
 
+    background-position: center; 
     background-image: url("../images/mole_buff.png");
     background-size: contain;
     background-repeat: no-repeat;
     z-index: 2;
-    opacity: 1;
 }
 
 .moleGameover { 
-    height: 120px;  
-    width: 100%; 
-    /* border: solid 1px black;  */
-    /* background-color: brown;  */
-    border-radius: 50%;  
+    height: inherit;  
+    width: auto;  
 
+    background-position: center; 
     background-image: url("../images/mole_bomber.png");
     background-size: contain;
     background-repeat: no-repeat;
     z-index: 2;
-    opacity: 1;
 }
 
-footer {
-    /* background-color: #808080;
-    color: white;
-    text-align: center;
-    width: 100%;
-
-    bottom: 0;
-    position: fixed;
-    height: 15%;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    align-items: center;
-
-    margin: 0; */
+.tap-grey {
+    -webkit-box-shadow: inset 0 0 10px 10px rgb(128, 128, 128, 0.75);
+    -moz-box-shadow: inset 0 0 10px 10px rgb(128, 128, 128, 0.75);
+    box-shadow: inset 0 0 10px 10px rgb(128, 128, 128, 0.75);
+    z-index: 3;
 }
+
+.tap-green {
+    -webkit-box-shadow: inset 0 0 10px 10px rgb(4, 170, 109, 0.75); 
+    -moz-box-shadow: inset 0 0 10px 10px rgb(4, 170, 109, 0.75); 
+    box-shadow: inset 0 0 10px 10px rgb(4, 170, 109, 0.75); 
+    z-index: 3;
+}
+
+.tap-red {
+    -webkit-box-shadow: inset 0 0 10px 10px rgba(255, 0, 0, 0.55);
+    -moz-box-shadow: inset 0 0 10px 10px rgba(255, 0, 0, 0.55);
+    box-shadow: inset 0 0 10px 10px rgba(255, 0, 0, 0.55);
+    z-index: 3;
+}
+
 
 #footer {
-    width:100%;
-    position:fixed;
-    bottom:0;
-    margin:0 auto;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    margin: 0 auto;
 
     background-color: #808080;
     color: white;
@@ -363,31 +326,31 @@ footer {
     justify-content: center;
     align-items: center;
 
-    border-top-left-radius:10px;
-    border-top-right-radius:10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 
 }
 
 #footer-activate, #close {
-    cursor:pointer;
-    display:block;
-    width:100%;
-    margin:0 auto;
-    padding:5px 0;
-    background:#808080;
-    color:#fff;
-    border:0;
-    text-align:center;
-    border-top-left-radius:10px;
-    border-top-right-radius:10px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    padding: 15px 0;
+    background: #808080;
+    color: #fff;
+    border: 0;
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 #footer-content-hidden {
     text-align: center;
-    background:#808080;
-    color:#fff;
-    width:99%;
-    min-height:50px;
+    background: #808080;
+    color: #fff;
+    width: 99%;
+    min-height: 50px;
 }
 
 .footer-content-none {
@@ -420,8 +383,8 @@ footer a {
 
 /* https://www.codexworld.com/code-snippets/modal-popup-with-html-css-jquery/ */
 .animate-top {
-    position:relative;
-    animation:animatetop 0.4s
+    position: relative;
+    animation: animatetop 0.4s
 }
 
 @keyframes animatetop {
@@ -549,43 +512,77 @@ footer a {
 }
 
 #gameoverMole {
-    height: 300px;
-    width: auto;
-    padding-left: 5%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 70%;
+    height: auto;
 }
 
 
 
 /* Mobile */
-/* @media only screen and (min-width: 290px) and (max-width: 549px) {
+@media only screen and (min-width: 290px) and (max-width: 320px) {
+    #game-admin {
+        flex-direction: row;
+    }
 
-} */
+    #score-title {
+        font-size: x-small;
+    }
+
+    #hammer-title {
+        font-size: x-small;
+    }
+
+    .molehole {
+        height: 95px;
+    }
+
+    #startGame {
+        width: 80px;
+    }
+
+    #scoreboard > div {
+        width: 80px;
+    }
+} 
 
 /* Phablet */
 @media only screen and (min-width: 550px) {
-    /* change to single line */
-    header {
-        height: 75px;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        align-items: center;
-        justify-content: space-around;
-    }
+    #game-environment {
+        justify-content: center;
+        align-content: center;
 
-    h1 {
-        padding: 0 2%;
-    }
-
-    #game-controls {
-        flex-direction: row;
+        height: 75vh;
     }
 
     #game-area {
-        margin-left: 10%;
-        width: 75%;
+        height: 100%;
 
         grid-template-columns: repeat(4, 23%);
-        gap: 2%;
+        gap: 1%;
+        margin: 0 1%;
+
+        padding-bottom: 0;
+    }
+
+    .molehole { 
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+    
+        height: 120px;  
+        width: 100%; 
+    
+        background-color: rgba(255, 255, 255, 0);; 
+        border-radius: 50%;
+    
+        background-position: center; 
+    
+        background-image: url("../images/molehole.png");
+        background-size: contain;
+        background-repeat: no-repeat;
     }
     
     #footer {
@@ -596,7 +593,7 @@ footer a {
     
         bottom: 0;
         position: fixed;
-        height: 10%;
+        height: 10vh;
     
         display: flex;
         flex-direction: column;
@@ -636,16 +633,32 @@ footer a {
         padding: 6px;
     
         margin-bottom: 20px;
-        /* display: inline-block; */
+    }
+}
+
+@media only screen and (min-width: 650px) {
+    #game-admin {
+        flex-direction: row;
     }
 }
 
 /* Tablet */
 @media only screen and (min-width: 750px) {
-
+    #game-environment {
+        padding-top: 0;
+    }
 }
 
 /* Desktop */
-@media only screen and (min-width: 1400px) {
+@media only screen and (min-width: 1000px) {
+    #game-environment {
+        padding: 1% 0;
+        height: 70vh;
+    }
+}
 
+@media only screen and (min-width: 1200px) {
+    .molehole{
+        height: 150px;
+    }
 }

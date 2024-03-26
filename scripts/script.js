@@ -41,13 +41,13 @@ $(document).ready(function() {
 $('.molehole').click(function(e) {
     if(game_run) {
         if($(e.target).hasClass('mole')) {              // Normal mole hit, score increases
-            console.log("BONK!");
+            console.log("BONK!");  
             $(e.target).addClass('tap-green');
+            scoreIncrease(1);
             setTimeout(function() {
                 $(e.target).removeClass('tap-green');
             }, 100);
             $(e.target).removeClass('mole');
-            scoreIncrease(1);
         }
         else if($(e.target).hasClass('moleMedic')) {    // Medic mole hit, score and hammer hp increase
             console.log("BONK!");
@@ -71,7 +71,6 @@ $('.molehole').click(function(e) {
         }
         else if($(e.target).hasClass('moleBuff')) {     // Buff mole hit, score increases
             console.log("BONK!");
-
             if(clicked) {
                 $(e.target).addClass('tap-green');
                 setTimeout(function() {
@@ -82,10 +81,10 @@ $('.molehole').click(function(e) {
             }
             else {
                 $(e.target).addClass('tap-grey');
+                clicked = true;
                 setTimeout(function() {
                     $(e.target).removeClass('tap-grey');
-                }, 100);
-                clicked = true;
+                }, 500);
             }
         }
         else if($(e.target).hasClass('moleGameover')) { // Gameover mole hit, score increases but game over
