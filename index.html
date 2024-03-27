@@ -9,7 +9,8 @@
         <meta name="author" content="Marcus Parker">
 
         <!-- font awesome and google fonts -->
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"/> <link href="https://fonts.googleapis.com/css?family=Raleway%7CRighteous" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"/> 
+        <link href="https://fonts.googleapis.com/css?family=Raleway%7CRighteous" rel="stylesheet">
         <link rel="stylesheet" href="assets/css/style.css">
 
         <link rel='shortcut icon' type='image/x-icon' href='favicon.ico'/>
@@ -30,7 +31,7 @@
             <div id="game-admin">
                 <!-- Buttons to start/stop the game and show instructions on how to play the game -->
                 <div id="game-controls">
-                    <button id="startGame" class="button_stopped" onclick="newGame()">Start Game</button>
+                    <button id="start-game" class="button-stopped" onclick="newGame()">Start Game</button>
                     <button id="instructions" onClick="instructions()">?</button>
                 </div>
                 <!-- Displays for score and hammer HP -->
@@ -66,7 +67,8 @@
         </div>
 
         <!-- Modal to show instructions on how to play the game, activated by button -->
-        <div id="modalInstructions" class="modal">
+        <!-- https://www.codexworld.com/code-snippets/modal-popup-with-html-css-jquery/ -->
+        <div id="modal-instructions" class="modal modal-show">
             <div class="modal-content animate-top">
                 <div class="modal-header">
                     <h5 class="modal-title">Instructions</h5>
@@ -82,15 +84,15 @@
                     <p>□ Have fun!</p>
 
                     <img class="instructions_mole" src="assets/images/mole_normal.png" alt="normal mole">
-                    <p class="instructions_p">Mole Mole - Score +1</p>
+                    <p class="instructions-p">Mole Mole - Score +1</p>
                     <img class="instructions_mole" src="assets/images/mole_buff.png" alt="buff mole">
-                    <p class="instructions_p">Swole Mole - 2 Hits = Score +2</p>
+                    <p class="instructions-p">Swole Mole - 2 Hits = Score +2</p>
                     <img class="instructions_mole" src="assets/images/mole_miner.png" alt="miner mole">
-                    <p class="instructions_p">Coal Mole - Score +1. Hammer HP -1</p>
+                    <p class="instructions-p">Coal Mole - Score +1. Hammer HP -1</p>
                     <img class="instructions_mole" src="assets/images/mole_medic.png" alt="medic mole">
-                    <p class="instructions_p">Dr Mole - Score +1. Hammer HP +1</p>
+                    <p class="instructions-p">Dr Mole - Score +1. Hammer HP +1</p>
                     <img class="instructions_mole" src="assets/images/mole_bomber.png" alt="bomb mole">
-                    <p class="instructions_p">Dem-mole-litionist - Instant Game Over</p>
+                    <p class="instructions-p">Dem-mole-litionist - Instant Game Over</p>
                 </div>
                 <div class="modal-footer">
                 </div>
@@ -98,7 +100,8 @@
         </div>
 
         <!-- Modal to show gameover. Actived by hammer HP reaching zero -->
-        <div id="modalGameover" class="modal">
+        <!-- https://www.codexworld.com/code-snippets/modal-popup-with-html-css-jquery/ -->
+        <div id="modal-gameover" class="modal">
             <div class="modal-content animate-top">
                 <div class="modal-header">
                     <h5 class="modal-title">GAME OVER!</h5>
@@ -108,8 +111,8 @@
                 </div>
                 <div class="modal-body-center">
                     <p>Better luck next time.</p>
-                    <img id="gameoverMole" src="assets/images/mole_gameover.png" alt="game over mole">
-                    <button id="startGame" class="button_stopped" onclick="restartGame()">Restart Game</button>
+                    <img id="gameover-mole" src="assets/images/mole_gameover.png" alt="game over mole">
+                    <button id="restart-game" class="button-stopped" onclick="restartGame()">Restart</button>
                 </div>
                 <div class="modal-footer">
                 </div>
@@ -119,7 +122,7 @@
         <!-- Footer for the website. Contains author information -->
         <!-- https://codepen.io/philknowles/pen/WrYRvG -->
         <footer id="footer">
-            <button id="footer-activate" onclick="toggleFooter()"><i class="fa fa-solid fa-caret-down dropRotate"></i></button>
+            <button id="footer-activate" onclick="toggleFooter()"><i class="fa fa-solid fa-caret-down drop-rotate"></i></button>
             <div id="footer-content" class="footer-content-none">
                 <p>Author: Marcus Parker</p>
                 <a href="https://github.com/mparker-landt" target="_blank" aria-label="Link to authors Github Page">@mparker-landt</a>
