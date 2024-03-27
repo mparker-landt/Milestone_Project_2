@@ -41,67 +41,76 @@ $(document).ready(function() {
 $('.molehole').click(function(e) {
     if(game_run) {
         if($(e.target).hasClass('mole')) {              // Normal mole hit, score increases
+            var _this = this;
             console.log("BONK!");  
-            $(e.target).addClass('tap-green');
-            scoreIncrease(1);
+            $(_this).addClass('tap-green');
             setTimeout(function() {
-                $(e.target).removeClass('tap-green');
+                $(_this).removeClass('tap-green');
             }, 100);
             $(e.target).removeClass('mole');
+            scoreIncrease(1);
         }
         else if($(e.target).hasClass('moleMedic')) {    // Medic mole hit, score and hammer hp increase
+            var _this = this;
             console.log("BONK!");
-            $(e.target).addClass('tap-green');
+            $(_this).addClass('tap-green');
             setTimeout(function() {
-                $(e.target).removeClass('tap-green');
+                $(_this).removeClass('tap-green');
             }, 100);
             $(e.target).removeClass('moleMedic');
             scoreIncrease(1);
             hammerIncrease();
         }
         else if($(e.target).hasClass('moleMiner')) {    // Miner mole hit, score increases, hammer hp decreases
+            var _this = this;
             console.log("BONK!");
-            $(e.target).addClass('tap-green');
+            $(_this).addClass('tap-green');
             setTimeout(function() {
-                $(e.target).removeClass('tap-green');
+                $(_this).removeClass('tap-green');
             }, 100);
             $(e.target).removeClass('moleMiner');
             scoreIncrease(1);
             hammerDecrease();
         }
         else if($(e.target).hasClass('moleBuff')) {     // Buff mole hit, score increases
+            var _this = this;
             console.log("BONK!");
             if(clicked) {
-                $(e.target).addClass('tap-green');
+                $(_this).addClass('tap-green');
                 setTimeout(function() {
-                    $(e.target).removeClass('tap-green');
+                    $(_this).removeClass('tap-grey');
+                    $(_this).removeClass('tap-green');
                 }, 100);
                 $(e.target).removeClass('moleBuff');
                 scoreIncrease(2);
             }
             else {
-                $(e.target).addClass('tap-grey');
+                $(_this).addClass('tap-grey');
                 clicked = true;
                 setTimeout(function() {
-                    $(e.target).removeClass('tap-grey');
-                }, 500);
+                    $(_this).removeClass('tap-grey');
+                }, 100);
             }
         }
         else if($(e.target).hasClass('moleGameover')) { // Gameover mole hit, score increases but game over
+            var _this = this;
             console.log("BONK!");
-            $(e.target).addClass('tap-green');
+            $(_this).addClass('tap-red');
             setTimeout(function() {
-                $(e.target).removeClass('tap-green');
+                $(_this).removeClass('tap-red');
             }, 100);
             $(e.target).removeClass('moleGameover');
             scoreIncrease(1);
             gameover();
         }
         else {                                          // Molehole hit, hammer hp decreases
+            var _this = this;
             console.log("BOOP!");
-            $(e.target).children("div").addClass('tap-red');
+            // $(_this).children("div").addClass('tap-red');
+            $(_this).addClass('tap-red');
             setTimeout(function() {
-                $(e.target).children("div").removeClass('tap-red');
+                // $(_this).children("div").removeClass('tap-red');
+                $(_this).removeClass('tap-red');
             }, 100);
             hammerDecrease();
         }
