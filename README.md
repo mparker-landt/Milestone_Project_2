@@ -66,10 +66,10 @@ Although designed first for smaller screens with touch capability the game plays
 #### Wireframes
 Wireframes were created with draw.io.\
 As the wireframes were made at the start of the project well in advance there were several differences and mistakes but generally they were followed throughout the project to bring it to completion.
-![wireframe](assets/images/readme/milestone2flow-wireframes.svg)
+![wireframe](assets/images/readme/milestone2flow-wireframes.png)
 #### Flow Charts
-![wireframe](assets/images/readme/milestone2flow-simple.svg)
-![wireframe](assets/images/readme/milestone2flow-advanced.svg)
+![simple flowchart](assets/images/readme/milestone2flow-simple.png)
+![advanced flowchart](assets/images/readme/milestone2flow-advanced.png)
 #### Colour Scheme
 For easy visuals bold colours were used:
 * <span style="color:#04AA6D">#04AA6D</span> - Used for the header, score and mole tap feedback in the game
@@ -86,25 +86,25 @@ For this project no opensource images were used. Instead custom images were crea
 A full list of the images provided:
 
 * Mole Hole
-<img src="assets/images/molehole.png" alt="drawing" width="200"/>
+<img src="assets/images/molehole.png" alt="molehole drawing" width="200"/>
 
 * Normal Mole
-<img src="assets/images/mole_normal.png" alt="drawing" width="200"/>
+<img src="assets/images/mole_normal.png" alt="normal mole character drawing" width="200"/>
 
 * Gameover Mole
-<img src="assets/images/mole_gameover.png" alt="drawing" width="200"/>
+<img src="assets/images/mole_gameover.png" alt="gameover mole character drawing" width="200"/>
 
 * Buff Mole
-<img src="assets/images/mole_buff.png" alt="drawing" width="200"/>
+<img src="assets/images/mole_buff.png" alt="buff mole character drawing" width="200"/>
 
 * Medic Mole
-<img src="assets/images/mole_medic.png" alt="drawing" width="200"/>
+<img src="assets/images/mole_medic.png" alt="medic mole character drawing" width="200"/>
 
 * Miner Mole
-<img src="assets/images/mole_miner.png" alt="drawing" width="200"/>
+<img src="assets/images/mole_miner.png" alt="miner mole character drawing" width="200"/>
 
 * Bomb Mole
-<img src="assets/images/mole_bomber.png" alt="drawing" width="200"/>
+<img src="assets/images/mole_bomber.png" alt="bomb mole character drawing" width="200"/>
 
 * For the favicon the Normal Mole image was used
 
@@ -115,38 +115,38 @@ Acknowledgements to the artist are found in the Credits section.
 * Start/Stop Game Button - This was the main control to start or stop the game.\
 On hover or press the button visuals changed to show the button and game was active. On larger screens with a mouse the mouse icon also changes to a pointer to show that the button is clickable.
 
-<img src="assets/images/readme/start-game.png" alt="drawing" width="200"/>
-<img src="assets/images/readme/start-game-hover.png" alt="drawing" width="200"/>
-<img src="assets/images/readme/stop-game.png" alt="drawing" width="200"/>
+<img src="assets/images/readme/start-game.png" alt="start game button" width="200"/>
+<img src="assets/images/readme/start-game-hover.png" alt="start game button hover" width="200"/>
+<img src="assets/images/readme/stop-game.png" alt="start game button pressed" width="200"/>
 
 * Instructions Button and Pop-up - This feature was made small and unobtrusive to not take away from the game.\
 On hover the button visuals changed and on larger screens the mouse icon changes to a pointer.\
 When clicked an instructions pop-up appears with rules for the game and explanations about the different mole characters. The modal could be closed with a close butt1on click or selecting anywhere outside the pop-up box.
 Due to user feedback the instructions were made to start off as visible on entering the webpage. 
 
-<img src="assets/images/readme/instructions.png" alt="drawing" width="200"/>
-<img src="assets/images/readme/instructions-hover.png" alt="drawing" width="200"/>
-<img src="assets/images/readme/instructions-modal.png" alt="drawing" width="200"/>
-<img src="assets/images/readme/instructions2.png" alt="drawing" width="200"/>
+<img src="assets/images/readme/instructions.png" alt="instructions button" width="200"/>
+<img src="assets/images/readme/instructions-hover.png" alt="instructions button hover" width="200"/>
+<img src="assets/images/readme/instructions-modal.png" alt="instructions modal page 1" width="200"/>
+<img src="assets/images/readme/instructions2.png" alt="instructions modal page 2" width="200"/>
 
 * Score and HP Counters - These icons started off with initial values on a new game. As they increased or decreased the border of the counter boxes flashed red or green corresponding to them decreasing or increasing respectively.
 
-<img src="assets/images/readme/scoreboard.png" alt="drawing" width="200"/>
-<img src="assets/images/readme/score-increase.png" alt="drawing" width="200"/>
-<img src="assets/images/readme/hammer-decrease.png" alt="drawing" width="200"/>
+<img src="assets/images/readme/scoreboard.png" alt="scoreboard" width="200"/>
+<img src="assets/images/readme/score-increase.png" alt="score increase" width="200"/>
+<img src="assets/images/readme/hammer-decrease.png" alt="hp decrease" width="200"/>
 
 * Game Area - The game area was where the main action of the webpage occurred when a game was started.\
 On tapping feedback was given via different circles appearing with red, green and grey colours corresponding to misses, hits and needing another tap respectively.\
 Different mole characters could pop-up randomly in any hole and stay active for a different amount of time depending on the mole character.
 
-<img src="assets/images/readme/tap-hit.png" alt="drawing" width="200"/>
-<img src="assets/images/readme/tap-miss.png" alt="drawing" width="200"/>
-<img src="assets/images/readme/tap.png" alt="drawing" width="200"/>
+<img src="assets/images/readme/tap-hit.png" alt="tap hit" width="200"/>
+<img src="assets/images/readme/tap-miss.png" alt="tap miss" width="200"/>
+<img src="assets/images/readme/tap.png" alt="tap once" width="200"/>
 
 * Game Over Pop-up - On reaching a hammer HP of 0 or hitting a game over mole character the game over pop-up would appear. This stopped the game but allowed it to be restarted with initial scores easily via a restart button.
 The pop-up modal could be closed via a close button or selecting anywhere outside the po- up box.
 
-<img src="assets/images/readme/gameover-modal.png" alt="drawing" width="200"/>
+<img src="assets/images/readme/gameover-modal.png" alt="game over modal" width="200"/>
 
 ### Advanced Game Features
 * Initially slow but speeds up as score increases
@@ -157,30 +157,30 @@ The pop-up modal could be closed via a close button or selecting anywhere outsid
 ### Design Features
 Whole Page - The webpage and game were primarily designed to be a single page in a view and not require any scrolling. For this reason it was targeted towards a tap mobile first approach but was made functional on larger screens.
 
-<img src="assets/images/readme/webpage.png" alt="drawing" width="200"/>
+<img src="assets/images/readme/webpage.png" alt="webpage" width="200"/>
 
 * Header - The header of the webpage was made to be as simple and visually appealing as possible. Due to there being no need for navigation the only use was for the title of the webpage.
 
-<img src="assets/images/readme/header.png" alt="drawing" width="200"/>
+<img src="assets/images/readme/header.png" alt="header" width="200"/>
 
 * Footer - The footer was made the generic colour of the webpage and not the same as the header to not visually get in the way of the webpage. It was used to display the author and link to authors Github profile.
 On smaller screens the footer was made collapsible to maximise the area for the game.
 
-<img src="assets/images/readme/footer.png" alt="drawing" width="200"/>
-<img src="assets/images/readme/footer-collapsed.png" alt="drawing" width="200"/>
+<img src="assets/images/readme/footer.png" alt="footer" width="200"/>
+<img src="assets/images/readme/footer-collapsed.png" alt="collapsed footer" width="200"/>
 
 * Game Controls - The Game Controls were made as simple as possible. The main control for the game was made bold to capture attention. the instructions for the game were made to be unobtrusive and easy and quick to use.
 
-<img src="assets/images/readme/game-controls.png" alt="drawing" width="200"/>
+<img src="assets/images/readme/game-controls.png" alt="game controls" width="200"/>
 
 * Score Board - The score board was kept simple and close to the game area so users could quickly and easily see their score and hammer HP at a glance. On the values changing in the scoreboard the borders of the values flashed an appropriate colour to show the values increasing or decreasing.
 
-<img src="assets/images/readme/scoreboard.png" alt="drawing" width="200"/>
+<img src="assets/images/readme/scoreboard.png" alt="scoreboard" width="200"/>
 
 * Game Area - The game area was made a bright colour to accurately show the grid of images that the game was performed upon. However it was made light green to correspond to grass and maximise the nature feel of the game. On mobile and smaller screens the grid was displayed in a vertical 3x4 grid, however on larger screens the grid switched to 4x3 layout to maximise space usage as much as possible.
 
-<img src="assets/images/readme/gamearea-vertical.png" alt="drawing" width="200"/>
-<img src="assets/images/readme/gamearea-horizontal.png" alt="drawing" width="200"/>
+<img src="assets/images/readme/gamearea-vertical.png" alt="vertical game area grid" width="200"/>
+<img src="assets/images/readme/gamearea-horizontal.png" alt="horizontal game area grid" width="200"/>
 
 * Modals - The modals were made grey to match the colour of generic aspects of the page. However the border was made black and yellow to give the characteristic of warning tape and make the pop ups stand out.\
 The modal was split into a header with title and close icon. This was separated from the body with a line divide. 
