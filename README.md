@@ -1,7 +1,7 @@
 # Whack-A-Mole
 
 Whack-A-Mole is an interactive frontend website created to meet the criteria of the Code Institute Milestone Project 2. \
-The website hosts a game of Whack-a-Mole that has a mole pop up in a random amount of time in a random molehole for which the user has to click. Everytime a mole is hit the user score increases. If a mole is not present and the user clicks the hammer HP decreases, if it hits zero the game ends.
+The website hosts a game of Whack-a-Mole that has a mole pop-up in a random amount of time in a random mole hole for which the user has to click. Every time a mole is hit the user score increases. If a mole is not present and the user clicks the hammer HP decreases, if it hits zero the game ends.
 
 Different mole characters appear after a certain score is reached that can affect the score and hammer HP differently.
 
@@ -45,16 +45,16 @@ Github: [mparker-landt](https://github.com/mparker-landt)
 + [Development & Deployment](#development--deployment "Development & Deployment")
   + [Development](#development "Development")
   + [Deployment](#deployment "Deployment")
-+ [Credits and Aknowledgements](#credits-and-aknowledgements "Credits and Aknowledgements")
++ [Credits and Acknowledgements](#credits-and-acknowledgements "Credits and Acknowledgements")
 
 ## UX
 ### User Demographic
 The game was designed for any user from age 5 onwards. Although probably more appealing to younger players it can be played by any age and offers a simple fun time to all.
 ### User Stories
 #### First time User Stories:
-* As a first time visitor I want to quickly understand the purpose of the website.
-* As a first time visitor I want to learn how to play the game and easily start a new game. 
-* As a first time visitor I want to be able to find the author and details for the creator of the site.
+* As a first-time visitor I want to quickly understand the purpose of the website.
+* As a first-time visitor I want to learn how to play the game and easily start a new game. 
+* As a first-time visitor I want to be able to find the author and details for the creator of the site.
 #### Returning User Stories:
 * As a returning user I want to start playing the game quickly and efficiently.
 * As a returning user I want to be able to play the game to beat my previous high score.
@@ -80,7 +80,7 @@ For easy visuals bold colours were used:
 
 #### Typography
 The font used for this project was [Anta](https://fonts.google.com/specimen/Anta).
-This is a modern font family designed for screen publications. Due to the easy readibility and modern glyph shapes this was used to match the game aspect. 
+This is a modern font family designed for screen publications. Due to the easy readability and modern glyph shapes this was used to match the game aspect. 
 #### Images
 For this project no opensource images were used. Instead custom images were created, compressed and imported into the game.
 A full list of the images provided:
@@ -119,9 +119,9 @@ On hover or press the button visuals changed to show the button and game was act
 <img src="assets/images/readme/start-game-hover.png" alt="drawing" width="200"/>
 <img src="assets/images/readme/stop-game.png" alt="drawing" width="200"/>
 
-* Instructions Button and Popup - This feature was made small and unobstrusive to not take away from the game.\
+* Instructions Button and Pop-up - This feature was made small and unobtrusive to not take away from the game.\
 On hover the button visuals changed and on larger screens the mouse icon changes to a pointer.\
-When clicked an instructions popup appears with rules for the game and explanations about the different mole characters. The modal could be closed with a close butt1on click or selecting anywhere outside the popup box.
+When clicked an instructions pop-up appears with rules for the game and explanations about the different mole characters. The modal could be closed with a close butt1on click or selecting anywhere outside the pop-up box.
 Due to user feedback the instructions were made to start off as visible on entering the webpage. 
 
 <img src="assets/images/readme/instructions.png" alt="drawing" width="200"/>
@@ -129,29 +129,29 @@ Due to user feedback the instructions were made to start off as visible on enter
 <img src="assets/images/readme/instructions-modal.png" alt="drawing" width="200"/>
 <img src="assets/images/readme/instructions2.png" alt="drawing" width="200"/>
 
-* Score and HP Counters - These icons started off with inital values on a newgame. As they increased or decreased the border of the counter boxes flashed red or green corresponding to them decreasing or increasing respectively.
+* Score and HP Counters - These icons started off with initial values on a new game. As they increased or decreased the border of the counter boxes flashed red or green corresponding to them decreasing or increasing respectively.
 
 <img src="assets/images/readme/scoreboard.png" alt="drawing" width="200"/>
 <img src="assets/images/readme/score-increase.png" alt="drawing" width="200"/>
 <img src="assets/images/readme/hammer-decrease.png" alt="drawing" width="200"/>
 
-* Game Area - The game area was were the main action of the webpage occured when a game was started.\
+* Game Area - The game area was where the main action of the webpage occurred when a game was started.\
 On tapping feedback was given via different circles appearing with red, green and grey colours corresponding to misses, hits and needing another tap respectively.\
-Different mole characters could pop up randomly in any hole and stay active for a different amount of time depending on the mole character.
+Different mole characters could pop-up randomly in any hole and stay active for a different amount of time depending on the mole character.
 
 <img src="assets/images/readme/tap-hit.png" alt="drawing" width="200"/>
 <img src="assets/images/readme/tap-miss.png" alt="drawing" width="200"/>
 <img src="assets/images/readme/tap.png" alt="drawing" width="200"/>
 
-* Gameover Popup - On reaching a hammer HP of 0 or hitting a gameover mole character the gameover popup would appear. This stopped the game but allowed it to be restarted with inital scores easily via a restart button.
-The popup modal could be closed via a close button or selecting anywhere outside the pop up box.
+* Game Over Pop-up - On reaching a hammer HP of 0 or hitting a game over mole character the game over pop-up would appear. This stopped the game but allowed it to be restarted with initial scores easily via a restart button.
+The pop-up modal could be closed via a close button or selecting anywhere outside the po- up box.
 
 <img src="assets/images/readme/gameover-modal.png" alt="drawing" width="200"/>
 
 ### Advanced Game Features
 * Initially slow but speeds up as score increases
 * Beginner grace period - At the start of a new game the first 5 moles would only be the base mole character and start off staying active longer than usual. Past a score of 5 new mole characters would appear and past a score of 10 the time moles stayed active became less.
-* Different Mole Characters - Initally the base game was created with only the base mole character. However for the advanced game different moles were added that affected the score and hammer HP in different ways.
+* Different Mole Characters - Initially the base game was created with only the base mole character. However for the advanced game different moles were added that affected the score and hammer HP in different ways.
 * Different speeds - The different mole characters had different times of staying active based on their characters. This was to increase the difficulty of the game.
 
 ### Design Features
@@ -169,11 +169,11 @@ On smaller screens the footer was made collapsible to maximise the area for the 
 <img src="assets/images/readme/footer.png" alt="drawing" width="200"/>
 <img src="assets/images/readme/footer-collapsed.png" alt="drawing" width="200"/>
 
-* Game Controls - The Game Controls were made as simple as possible. The main control for the game was made bold to capture attention. the instructions for the game were made to be unobstrusive and easy and quick to use.
+* Game Controls - The Game Controls were made as simple as possible. The main control for the game was made bold to capture attention. the instructions for the game were made to be unobtrusive and easy and quick to use.
 
 <img src="assets/images/readme/game-controls.png" alt="drawing" width="200"/>
 
-* Score Board - The score board was kept simple and close to the game area so users could quickly and easily see their score and hammer HP at a glance. On the values changing in the scoreboard the borders of the values flashed an appropiate colour to show the values increasing or decreasing.
+* Score Board - The score board was kept simple and close to the game area so users could quickly and easily see their score and hammer HP at a glance. On the values changing in the scoreboard the borders of the values flashed an appropriate colour to show the values increasing or decreasing.
 
 <img src="assets/images/readme/scoreboard.png" alt="drawing" width="200"/>
 
@@ -183,17 +183,17 @@ On smaller screens the footer was made collapsible to maximise the area for the 
 <img src="assets/images/readme/gamearea-horizontal.png" alt="drawing" width="200"/>
 
 * Modals - The modals were made grey to match the colour of generic aspects of the page. However the border was made black and yellow to give the characteristic of warning tape and make the pop ups stand out.\
-The modal was split into a header with title and close icon. This was seperated from the body with a line divide. 
-The main content of the body was contained with the body of the modal, for modals with large amounts of content the body was made scrollable rather than let the pop up increasing in height and potentially affecting the page underneath.
+The modal was split into a header with title and close icon. This was separated from the body with a line divide. 
+The main content of the body was contained with the body of the modal, for modals with large amounts of content the body was made scrollable rather than let the pop-up increasing in height and potentially affecting the page underneath.
 The modal also included a footer divided from the body and its content by another line break. This was to increase the visual aspect as well as be potentially used in the future for other features.
 
 ### Future Features
 Although complete as is future features were explored and considered viable. These included:
 * More moles could be activated as the score progresses.
 * More characters could be added to the game.
-* Score shown in gameover modal so players can see their final score and restart immedietly.
+* Score shown in game over modal so players can see their final score and restart immediately.
 * Animations for the moles being activated.
-* A tutorial on a new start to the game and/or activated via a seperate button for users to interactively learn about the mole characters and their aspects.
+* A tutorial on a new start to the game and/or activated via a separate button for users to interactively learn about the mole characters and their aspects.
 
 ## Resources
 ### Technologies
@@ -235,7 +235,7 @@ https://jigsaw.w3.org/css-validator/
 The CSS page was validated using the online CSS validator. There were no errors reported. 
 ![Responsive screenshot](assets/images/readme/css-validate.png)
 
-There were 24 warnings that all reported the same type of warning were the css was a vendor extension. These could be ignored as the css was inputted to improve visual aspects and funtionality on different devices.
+There were 24 warnings that all reported the same type of warning were the CSS was a vendor extension. These could be ignored as the CSS was inputted to improve visual aspects and functionality on different devices.
 ![Responsive screenshot](assets/images/readme/css-warnings-validate.png)
 ### JS Testing
 https://jshint.com/
@@ -249,7 +249,7 @@ The code had 27 warnings, mostly to do with ES6 standard. All of these could be 
 
 ![Responsive screenshot](assets/images/readme/js-warnings.png)
 
-The code had one undefined variable. This however was due to the use of JQuery thoughout the project which the JS Hint did not understand and therefore was not a problem.
+The code had one undefined variable. This however was due to the use of JQuery throughout the project which the JS Hint did not understand and therefore was not a problem.
 
 ![Responsive screenshot](assets/images/readme/js-undefined.png)
 
@@ -258,11 +258,11 @@ There were 11 unused variables. However these were called with click events from
 ![Responsive screenshot](assets/images/readme/js-unused.png)
 
 ## Known Bugs
-Although testing was performed throughout the project a small number of known bugs remained that could be potentally fixed.
+Although testing was performed throughout the project a small number of known bugs remained that could be potentially fixed.
 These were at time of submission of the project;
-* Footer dropup arrow not changing to a dropdown when the collapsible footer is opened.
+* Footer drop-up arrow not changing to a drop-down when the collapsible footer is opened.
 * On Google Chrome mobile devices the game area flashes whenever a mole is clicked.
-* If restart is pressed in the gameover pop up whilst a mole from the previous game is still active a new game will start with 2 moles activating in random holes instead of 1.
+* If restart is pressed in the game over pop-up whilst a mole from the previous game is still active a new game will start with 2 moles activating in random holes instead of 1.
 * If the start and stop button were pressed quickly enough several games were started with several moles activating in random holes instead of 1.
 * On Apple small screens the UI layout is squished and is not visually appealing.
 
@@ -301,13 +301,13 @@ Cloning the repository
 - Log into Github
 - Navigate to the project link
 - On the project page click the Code button
-- Copy the HTTPS or SSH link as preferenced
+- Copy the HTTPS or SSH link as preferred
 - Clone the project using the link with the tool of your choice (Git Terminal, Github Desktop, Sourcetree etc)
 
 ### Deployment
 The website was deployed live using Github and the Repository Pages in Settings.
 
-## Credits and Aknowledgements
+## Credits and Acknowledgements
 With special thanks to:
 * Lauren-Nicole Popich - Mentor from the Code Institute who provided help throughout the project and was always available for support.
 * Martina Terlevic - A mentor from the Code Institute who helped at the end of the project and gave some final tips.
@@ -316,7 +316,7 @@ With special thanks to:
 
 Extra credit and acknowledgement goes to:
 * https://www.codexworld.com/code-snippets/modal-popup-with-html-css-jquery/\
-This was used and adapted upon to create the pop up modals for the website.
+This was used and adapted upon to create the pop-up modals for the website.
 
 * https://codepen.io/philknowles/pen/WrYRvG\
 This was used for the collapsible footer on smaller screens for the website and had minor aspects changed to match the visuals of the colour scheme.

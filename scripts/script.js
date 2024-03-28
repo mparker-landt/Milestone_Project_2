@@ -32,8 +32,7 @@ const moles = document.querySelector('.mole');
 var clicked = false;
 
 //waits until page is loaded first
-$(document).ready(function() {
-    
+$(document).ready(function() {   
 });
 
 $('.molehole').click(function(e) {
