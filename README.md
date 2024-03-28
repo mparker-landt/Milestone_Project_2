@@ -41,9 +41,6 @@ Github: [mparker-landt](https://github.com/mparker-landt)
   + [HTML Validator Testing](#html-validator-testing "HTML Validator Testing")
   + [CSS Validator Testing](#css-validator-testing "CSS Validator Testing")
   + [JS Testing](#js-testing "JS Testing")
-  + [User Story Testing](#user-story-testing "User Story Testing")
-    + [First time User Goals](#first-time-user-goals "First time User Goals")
-    + [Returning User Goals](#returning-user-goals "Returning User Goals")
 + [Known Bugs](#known-bugs "Known Bugs")
 + [Development & Deployment](#development--deployment "Development & Deployment")
   + [Development](#development "Development")
@@ -124,12 +121,13 @@ On hover or press the button visuals changed to show the button and game was act
 
 * Instructions Button and Popup - This feature was made small and unobstrusive to not take away from the game.\
 On hover the button visuals changed and on larger screens the mouse icon changes to a pointer.\
-When clicked an instructions popup appears with rules for the game and explanations about the different mole characters. The modal could be closed with a close button click or selecting anywhere outside the popup box.
+When clicked an instructions popup appears with rules for the game and explanations about the different mole characters. The modal could be closed with a close butt1on click or selecting anywhere outside the popup box.
 Due to user feedback the instructions were made to start off as visible on entering the webpage. 
 
 <img src="assets/images/readme/instructions.png" alt="drawing" width="200"/>
 <img src="assets/images/readme/instructions-hover.png" alt="drawing" width="200"/>
 <img src="assets/images/readme/instructions-modal.png" alt="drawing" width="200"/>
+<img src="assets/images/readme/instructions2.png" alt="drawing" width="200"/>
 
 * Score and HP Counters - These icons started off with inital values on a newgame. As they increased or decreased the border of the counter boxes flashed red or green corresponding to them decreasing or increasing respectively.
 
@@ -143,6 +141,7 @@ Different mole characters could pop up randomly in any hole and stay active for 
 
 <img src="assets/images/readme/tap-hit.png" alt="drawing" width="200"/>
 <img src="assets/images/readme/tap-miss.png" alt="drawing" width="200"/>
+<img src="assets/images/readme/tap.png" alt="drawing" width="200"/>
 
 * Gameover Popup - On reaching a hammer HP of 0 or hitting a gameover mole character the gameover popup would appear. This stopped the game but allowed it to be restarted with inital scores easily via a restart button.
 The popup modal could be closed via a close button or selecting anywhere outside the pop up box.
@@ -156,6 +155,10 @@ The popup modal could be closed via a close button or selecting anywhere outside
 * Different speeds - The different mole characters had different times of staying active based on their characters. This was to increase the difficulty of the game.
 
 ### Design Features
+Whole Page - The webpage and game were primarily designed to be a single page in a view and not require any scrolling. For this reason it was targeted towards a tap mobile first approach but was made functional on larger screens.
+
+<img src="assets/images/readme/webpage.png" alt="drawing" width="200"/>
+
 * Header - The header of the webpage was made to be as simple and visually appealing as possible. Due to there being no need for navigation the only use was for the title of the webpage.
 
 <img src="assets/images/readme/header.png" alt="drawing" width="200"/>
@@ -164,6 +167,7 @@ The popup modal could be closed via a close button or selecting anywhere outside
 On smaller screens the footer was made collapsible to maximise the area for the game.
 
 <img src="assets/images/readme/footer.png" alt="drawing" width="200"/>
+<img src="assets/images/readme/footer-collapsed.png" alt="drawing" width="200"/>
 
 * Game Controls - The Game Controls were made as simple as possible. The main control for the game was made bold to capture attention. the instructions for the game were made to be unobstrusive and easy and quick to use.
 
@@ -214,6 +218,8 @@ For the HTML and CSS testing was done with Google Chrome and Firefox Development
 For JavaScript functionality testing a small group of friends and colleagues were used as a test group to provide feedback and notify about bugs that could have been missed.
 ### Performance Testing
 The website performance was tested using Google Chrome Developer Tools Lighthouse feature.
+For the webpage the Performance, Best Practices and SEO were all high with scores of 98 and 100 respectively.
+The Accessibility score was not as high with a value of 84. 
 
 ![Responsive screenshot](assets/images/readme/lighthouse.png)
 
@@ -232,12 +238,24 @@ The CSS page was validated using the online CSS validator. There were no errors 
 There were 24 warnings that all reported the same type of warning were the css was a vendor extension. These could be ignored as the css was inputted to improve visual aspects and funtionality on different devices.
 ![Responsive screenshot](assets/images/readme/css-warnings-validate.png)
 ### JS Testing
-TBC
-### User Story Testing
-#### First time User Goals:
-TBC
-#### Returning User Goals:
-TBC
+https://jshint.com/
+
+The JavaScript for the project was tested mainly by user testing and direct feedback. Console logs were used throughout development to understand the logic of what was happening when using the browser development tools.
+The JavaScript code was also put into JS Hint to acquire more metrics and find and possible warnings and errors.
+
+![Responsive screenshot](assets/images/readme/js-metrics.png)
+
+The code had 27 warnings, mostly to do with ES6 standard. All of these could be safely ignored and be certain they would not affect functionality of the webpage.
+
+![Responsive screenshot](assets/images/readme/js-warnings.png)
+
+The code had one undefined variable. This however was due to the use of JQuery thoughout the project which the JS Hint did not understand and therefore was not a problem.
+
+![Responsive screenshot](assets/images/readme/js-undefined.png)
+
+There were 11 unused variables. However these were called with click events from the HTML file and therefore were used and needed for the webpage to function.
+
+![Responsive screenshot](assets/images/readme/js-unused.png)
 
 ## Known Bugs
 Although testing was performed throughout the project a small number of known bugs remained that could be potentally fixed.
@@ -245,6 +263,7 @@ These were at time of submission of the project;
 * Footer dropup arrow not changing to a dropdown when the collapsible footer is opened.
 * On Google Chrome mobile devices the game area flashes whenever a mole is clicked.
 * If restart is pressed in the gameover pop up whilst a mole from the previous game is still active a new game will start with 2 moles activating in random holes instead of 1.
+* If the start and stop button were pressed quickly enough several games were started with several moles activating in random holes instead of 1.
 * On Apple small screens the UI layout is squished and is not visually appealing.
 
 ## Development & Deployment
