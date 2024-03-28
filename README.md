@@ -77,6 +77,7 @@ For easy visuals bold colours were used:
 * <span style="color:#808080">#808080</span> - Used for the footer and generic buttons and borders
 * <span style="color:#339DFF">#339DFF</span> - Used for the main button to start/stop the game
 * <span style="color:#FF0000">#FF0000</span> - Used for hammer HP and missed mole tap feedback
+![colour scheme](assets/images/readme/color-scheme.png)
 
 #### Typography
 The font used for this project was [Anta](https://fonts.google.com/specimen/Anta).
